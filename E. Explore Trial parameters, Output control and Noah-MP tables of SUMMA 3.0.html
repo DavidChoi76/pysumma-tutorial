@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A. Explore file manger of SUMMA 3.0.0 &#8212; pySUMMA Tutorial Jupyter Notebooks</title>
+    <title>E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0 &#8212; pySUMMA Tutorial Jupyter Notebooks</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="B. Explore decision file of SUMMA 3.0.0" href="B.%20Explore%20decision%20file%20of%20SUMMA%203.0.0.html" />
-    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+    <link rel="next" title="F. Explore Initial conditions restart or state file of SUMMA 3.0.0" href="F.%20Explore%20Initial%20conditions%20restart%20or%20state%20file.html" />
+    <link rel="prev" title="D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0" href="D.%20Explore%20local%20attributes%2C%20local%20parameters%20%28global%20hru%29%20and%20basin%20parameters%20%28global%20gru%29%20of%20SUMMA%203.0.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -111,8 +111,8 @@
      Content with notebooks
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="A.%20Explore%20file%20manger%20of%20SUMMA%203.0.3.html">
      A. Explore file manger of SUMMA 3.0.0
     </a>
    </li>
@@ -131,8 +131,8 @@
      D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="E.%20Explore%20Trial%20parameters%2C%20Output%20control%20and%20Noah-MP%20tables%20of%20SUMMA%203.0.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0
     </a>
    </li>
@@ -330,7 +330,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/A. Explore file manger of SUMMA 3.0.3.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -350,7 +350,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/DavidChoi76/pysumma-tutorial/issues/new?title=Issue%20on%20page%20%2FA. Explore file manger of SUMMA 3.0.3.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/DavidChoi76/pysumma-tutorial/issues/new?title=Issue%20on%20page%20%2FE. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -371,7 +371,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/DavidChoi76/pysumma-tutorial/master?urlpath=tree/docs/A. Explore file manger of SUMMA 3.0.3.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DavidChoi76/pysumma-tutorial/master?urlpath=tree/docs/E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -407,24 +407,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#explore-file-manager">
-   3. Explore file manager
+  <a class="reference internal nav-link" href="#explore-trial-parameters-file">
+   3. Explore trial parameters file
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#show-file-manager-using-orginal-contents-attribute">
-     3.1 Show file manager using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       orginal_contents
-      </span>
-     </code>
-     attribute
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#show-file-manager-using-print-command">
-     3.2 Show file manager using
+    <a class="reference internal nav-link" href="#show-trial-parameters-using-print-command">
+     3.1 Show trial parameters using
      <code class="docutils literal notranslate">
       <span class="pre">
        print
@@ -434,21 +423,78 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#get-value-of-each-line-in-file-manager">
-     3.3 Get value of each line in file manager
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#change-the-value-of-each-line-in-file-manager">
-     3.4 Change the value of each line in file manager
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#look-at-other-configuration-files-using-manager-modules">
-     3.5 Look at other configuration files using manager modules
+    <a class="reference internal nav-link" href="#change-value-of-summerlai-in-trial-parameters">
+     3.2 Change value of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       summerLAI
+      </span>
+     </code>
+     in trial parameters
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explore-output-control-text-file">
+   4. Explore Output control text file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modifying-output">
+     Modifying output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-output-control-file-using-print-command">
+     4.1 Show output control file using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       print
+      </span>
+     </code>
+     command
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-value-of-scalarlatheattotal-in-output-control-text-file">
+     4.2 Show value of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scalarLatHeatTotal
+      </span>
+     </code>
+     in output control text file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-value-of-scalarlatheattotal-in-output-control-text-file">
+     4.3 Change value of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scalarLatHeatTotal
+      </span>
+     </code>
+     in output control text file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-value-of-scalarlatheattotal-back-in-output-control-text-file">
+     4.4 Change value of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scalarLatHeatTotal
+      </span>
+     </code>
+     back in output control text file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explore-noah-mp-tables-text-file">
+   5. Explore Noah-MP tables text file
+  </a>
  </li>
 </ul>
 
@@ -461,99 +507,13 @@
         
               <div>
                 
-  <div class="section" id="a-explore-file-manger-of-summa-3-0-0">
-<h1>A. Explore file manger of SUMMA 3.0.0<a class="headerlink" href="#a-explore-file-manger-of-summa-3-0-0" title="Permalink to this headline">¶</a></h1>
-<p>SUMMA has a large number of input files that configure the model and provide the necessary initial conditions and time-varying boundary conditions to make a model simulation. This can at times be confusing. We encourage the user to look at the SUMMA test cases, which provide working SUMMA setups.</p>
-<p>The <strong><code class="docutils literal notranslate"><span class="pre">master</span> <span class="pre">configuration</span> <span class="pre">file</span></code></strong> (called <strong><code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">manger</span></code></strong>) is an <strong>ASCII file</strong> and is provided to SUMMA at run-time as a command-line option. The path to this file needs to be supplied with the <strong><code class="docutils literal notranslate"><span class="pre">-m</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">--master</span></code></strong> command-line flag. The contents of this file orchestrate the remainder of the SUMMA run and are processed by the code in <strong><code class="docutils literal notranslate"><span class="pre">build/source/hookup/summaFileManager.f90</span></code></strong>. The file contents mostly consist of file paths that provide the actual information about the model configuration.</p>
-<p>The following items must be provided in order in the master configuration file. Each item must be on its own line, but may be followed by a comment and you can add lines of comments between the items. Each entry must be enclosed in single quotes ‘entry’. In the following, I start each enumerated entry with the actual variable name that is used in the SUMMA source code to refer to each of the entries (in summaFileManager.f90) and its default value in case you are trying to trace a problem.</p>
-<p>The model file manager file must also contain the start (<code class="docutils literal notranslate"><span class="pre">simStartTime</span></code>) and end (<code class="docutils literal notranslate"><span class="pre">simEndTime</span></code>) times of the simulation. These are specified as <code class="docutils literal notranslate"><span class="pre">'YYYY-MM-DD</span> <span class="pre">hh:mm'</span></code> and must be enclosed in single quotes. They are typically the first model file manager to be specified.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">controlVersion</span></code>
-: Version of the file manager that should be used to process the master configuration file. At this time, this string should be equal to ‘SUMMA_FILE_MANAGER_V3.0’.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">simStartTime</span></code>:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">simEndTime</span></code>:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tmZoneInfo</span></code>:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">settingsPath</span></code>: Base path for the configuration files. Most of the file paths in the remainder of the master configuration file are relative to this path (except INPUT_PATH and OUTPUT_PATH).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forcingPath</span></code>: Base path for the meteorological forcing files specified in the FORCING_FILELIST.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outputPath</span></code>: Base path for the SUMMA output files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">decisionsFile</span></code>: File path for the model decisions file (relative to settings_path).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outputControlFile</span></code>: File path for the output control file (relative to settings_path).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">globalHruParamFile</span></code>: File path for the local parameters file (relative to settings_path).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">globalGruParamFile</span></code>: File path for the basin parameters file (relative to settings_path)’.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">attributeFile</span></code>: File path for the local attributes file (relative to settings_path).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trialParamFile</span></code>: File path for the trial parameters file (relative to settings_path).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">forcingListFile</span></code>: File path for the list of forcing files file (relative to settings_path).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initConditionFile</span></code>: File path for the initial conditions file (relative to settings_path).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outFilePrefix</span></code>: Text string prepended to each output filename to identify a specific model setup. Note that the user can further modify the output file name at run-time by using the -s|–suffix command-line option.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vegTableFile</span></code>:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">soilTableFile</span></code>:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">generalTableFile</span></code>:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">noahmpTableFile</span></code>:</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysumma</span> <span class="kn">import</span> <span class="n">hydroshare_utils</span>
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="c1"># Download SUMMA Model Instance from HydroShare</span>
-<span class="n">resource_id</span> <span class="o">=</span> <span class="s1">&#39;13d6b84a9553410297a67fa366a56cb2&#39;</span>
-<span class="n">instance</span> <span class="o">=</span> <span class="n">hydroshare_utils</span><span class="o">.</span><span class="n">get_hs_resource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">25</span><span class="n">da1dd0dc7d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Download SUMMA Model Instance from HydroShare</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">resource_id</span> <span class="o">=</span> <span class="s1">&#39;13d6b84a9553410297a67fa366a56cb2&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">hydroshare_utils</span><span class="o">.</span><span class="n">get_hs_resource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
-
-<span class="nn">~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/hydroshare_utils.py</span> in <span class="ni">get_hs_resource</span><span class="nt">(resource_id, file_path)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="c1"># download SUMMA TestCase from HydroShare</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="k">def</span> <span class="nf">get_hs_resource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">23</span>     <span class="n">hs</span> <span class="o">=</span> <span class="n">HydroShare</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">hs</span><span class="o">.</span><span class="n">getResource</span><span class="p">(</span><span class="n">resource_id</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> <span class="n">unzip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> 
-
-<span class="nn">~/anaconda3/envs/pysumma/lib/python3.8/site-packages/hs_restclient/__init__.py</span> in <span class="ni">__init__</span><span class="nt">(self, hostname, port, use_https, verify, auth, prompt_auth)</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>         <span class="k">elif</span> <span class="n">prompt_auth</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span>             <span class="kn">import</span> <span class="nn">getpass</span>
-<span class="ne">---&gt; </span><span class="mi">79</span>             <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Username: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span>             <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Password for </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>             <span class="n">auth</span> <span class="o">=</span> <span class="n">HydroShareAuthBasic</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
-
-<span class="nn">~/anaconda3/envs/pysumma/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">--&gt; </span><span class="mi">857</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="nb">cd</span> <span class="o">{</span>instance<span class="o">}</span>/<span class="p">;</span> chmod +x ./installTestCases_local.sh
-<span class="o">!</span><span class="nb">cd</span> <span class="o">{</span>instance<span class="o">}</span>/<span class="p">;</span> ./installTestCases_local.sh
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestCases installed
-</pre></div>
-</div>
-</div>
-</div>
+  <div class="section" id="e-explore-trial-parameters-output-control-and-noah-mp-tables-of-summa-3-0">
+<h1>E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0<a class="headerlink" href="#e-explore-trial-parameters-output-control-and-noah-mp-tables-of-summa-3-0" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="import-pysumma-3-0-0">
 <h2>1. Import pySUMMA 3.0.0<a class="headerlink" href="#import-pysumma-3-0-0" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pysumma</span> <span class="k">as</span> <span class="nn">ps</span>
-<span class="kn">import</span> <span class="nn">os</span>
 </pre></div>
 </div>
 </div>
@@ -563,267 +523,179 @@
 <h2>2. Create Simulatioin Object<a class="headerlink" href="#create-simulatioin-object" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">instance</span> <span class="o">=</span> <span class="s1">&#39;SummaModel_ReynoldsAspenStand_StomatalResistance&#39;</span>
-<span class="n">executable</span> <span class="o">=</span> <span class="s2">&quot;/usr/bin/summa.exe&quot;</span>
-<span class="n">file_manager</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">instance</span><span class="p">,</span> <span class="s1">&#39;settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">executable</span> <span class="o">=</span> <span class="s2">&quot;/usr/bin/summa.exe&quot;</span>
+<span class="n">file_manager</span> <span class="o">=</span> <span class="s1">&#39;SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">executable</span><span class="p">,</span> <span class="n">file_manager</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+&lt;ipython-input-2-61930731a931&gt; in &lt;module&gt;
+      2 file_manager = &#39;SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;
+      3 
+----&gt; 4 s = ps.Simulation(executable, file_manager)
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/simulation.py in __init__(self, executable, filemanager, initialize, config_dir)
+     61         self.status = &#39;Uninitialized&#39;
+     62         if initialize:
+---&gt; 63             self.initialize()
+     64 
+     65     def initialize(self):
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/simulation.py in initialize(self)
+     71         ``reset`` method.
+     72         &quot;&quot;&quot;
+---&gt; 73         self.manager = FileManager(
+     74             self.manager_path.parent, self.manager_path.name)
+     75         self.status = &#39;Initialized&#39;
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/file_manager.py in __init__(self, path, name)
+     42 
+     43     def __init__(self, path, name):
+---&gt; 44         super().__init__(FileManagerOption, path, name)
+     45         assert self.get_value(&#39;controlVersion&#39;) == &#39;SUMMA_FILE_MANAGER_V3.0.0&#39;
+     46 
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/option.py in __init__(self, optiontype, dir, name)
+    119         self.header = []
+    120         self.options = []
+--&gt; 121         self.read(os.path.abspath(self.original_path / self.file_name))
+    122 
+    123     def set_option(self):
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/option.py in read(self, path)
+    141     def read(self, path):
+    142         &quot;&quot;&quot;Read the configuration and populate the options&quot;&quot;&quot;
+--&gt; 143         with open(path, &#39;r&#39;) as f:
+    144             self.original_contents = f.readlines()
+    145         for line in self.original_contents:
+
+FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/choi/project/pysumma-tutorial/docs/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;
+</pre></div>
 </div>
 </div>
-<div class="section" id="explore-file-manager">
-<h2>3. Explore file manager<a class="headerlink" href="#explore-file-manager" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="show-file-manager-using-orginal-contents-attribute">
-<h3>3.1 Show file manager using <code class="docutils literal notranslate"><span class="pre">orginal_contents</span></code> attribute<a class="headerlink" href="#show-file-manager-using-orginal-contents-attribute" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="explore-trial-parameters-file">
+<h2>3. Explore trial parameters file<a class="headerlink" href="#explore-trial-parameters-file" title="Permalink to this headline">¶</a></h2>
+<p>The trial parameters file is a NetCDF file that specifies model parameters for GRUs and individual HRUs. This enables the user to overwrite the default and/or Noah-MP parameter values with local-specific ones. The trial parameters file is parsed by <strong><code class="docutils literal notranslate"><span class="pre">build/source/engine/read_param.f90:read_param()</span></code></strong>.</p>
+<p>The trial parameters file contains a <code class="docutils literal notranslate"><span class="pre">gru</span></code> and/or an <code class="docutils literal notranslate"><span class="pre">hru</span></code> dimension, depending on whether GRU or HRU are being specified. The file can be used to overwrite any of the variables in the basin parameters file, in which the variable dimension should be <code class="docutils literal notranslate"><span class="pre">gru</span></code>, or in the local parameters file, in which the variable dimension should be <code class="docutils literal notranslate"><span class="pre">hru</span></code>. The file can contain zero or more parameter fields.</p>
+<p>The file should include an index variable (<code class="docutils literal notranslate"><span class="pre">hruId</span></code> and/or <code class="docutils literal notranslate"><span class="pre">gruId</span></code>) that corresponds to the values used in the local attributes file to provide the mapping of parameter values to each individual HRU and GRU. Variable names in the trial parameters file must match those in <strong><code class="docutils literal notranslate"><span class="pre">build/source/dshare/var_lookup.f90:iLook_param</span></code></strong> for HRU parameters and <strong><code class="docutils literal notranslate"><span class="pre">build/source/dshare/var_lookup.f90:iLook_bpar</span></code></strong> for GRU parameters. Note that this matching is case-sensitive.</p>
+<div class="section" id="show-trial-parameters-using-print-command">
+<h3>3.1 Show trial parameters using <code class="docutils literal notranslate"><span class="pre">print</span></code> command<a class="headerlink" href="#show-trial-parameters-using-print-command" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">original_contents</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read parameter trial netCDF file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">trial_params</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;controlVersion       &#39;SUMMA_FILE_MANAGER_V3.0.0&#39; !  fman_ver\n&quot;,
- &quot;simStartTime         &#39;2006-07-01 00:00&#39; ! \n&quot;,
- &quot;simEndTime           &#39;2007-09-30 00:00&#39; ! \n&quot;,
- &quot;tmZoneInfo           &#39;localTime&#39; ! \n&quot;,
- &quot;settingsPath         &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39; !  setting_path\n&quot;,
- &quot;forcingPath          &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39; !  input_path\n&quot;,
- &quot;outputPath           &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/output/&#39; !  output_path\n&quot;,
- &quot;decisionsFile        &#39;summa_zDecisions_riparianAspenSimpleResistance.txt&#39; !  decision\n&quot;,
- &quot;outputControlFile    &#39;meta/Model_Output.txt&#39; !  OUTPUT_CONTROL\n&quot;,
- &quot;globalHruParamFile   &#39;summa_zLocalParamInfo.txt&#39; !  local_par\n&quot;,
- &quot;globalGruParamFile   &#39;summa_zBasinParamInfo.txt&#39; !  basin_par\n&quot;,
- &quot;attributeFile        &#39;summa_zLocalAttributes_riparianAspen.nc&#39; !  local_attr\n&quot;,
- &quot;trialParamFile       &#39;summa_zParamTrial_riparianAspen.nc&#39; !  para_trial\n&quot;,
- &quot;forcingListFile      &#39;summa_zForcingFileList_riparianAspen.txt&#39; !  forcing_list\n&quot;,
- &quot;initConditionFile    &#39;summa_zInitialCond.nc&#39; !  initial_cond\n&quot;,
- &quot;outFilePrefix        &#39;vegImpactsTranspire&#39; !  output_prefix\n&quot;,
- &quot;vegTableFile         &#39;VEGPARM.TBL&#39; ! \n&quot;,
- &quot;soilTableFile        &#39;SOILPARM.TBL&#39; ! \n&quot;,
- &quot;generalTableFile     &#39;GENPARM.TBL&#39; ! \n&quot;,
- &quot;noahmpTableFile      &#39;MPTABLE.TBL&#39; ! \n&quot;,
- &#39;! history Mon Jul 20 16:08:15 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./wrrPaperTestCases/figure07/summa_fileManager_riparianAspenSimpleResistance.txt\n&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
+Dimensions:             (hru: 1)
+Dimensions without coordinates: hru
+Data variables:
+    hruIndex            (hru) float64 1.001e+03
+    frozenPrecipMultip  (hru) float64 1.0
+    theta_mp            (hru) float64 0.2211
+    theta_sat           (hru) float64 0.4792
+    theta_res           (hru) float64 0.1
+    vGn_alpha           (hru) float64 -0.858
+    vGn_n               (hru) float64 1.306
+    f_impede            (hru) float64 0.0
+    k_soil              (hru) float64 3.53e-06
+    k_macropore         (hru) float64 0.06255
+    critSoilWilting     (hru) float64 0.125
+    critSoilTranspire   (hru) float64 0.2
+    winterSAI           (hru) float64 0.45
+    summerLAI           (hru) float64 2.5
+    heightCanopyTop     (hru) float64 9.5
+    heightCanopyBottom  (hru) float64 3.0
+    kAnisotropic        (hru) float64 1.0
+    rootDistExp         (hru) float64 1.0
+    zScale_TOPMODEL     (hru) float64 4.057
+    qSurfScale          (hru) float64 84.06
+Attributes:
+    history:  Converted to NetCDF using &quot;/Users/nijssen/Dropbox/data/PLUMBER/...
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="show-file-manager-using-print-command">
-<h3>3.2 Show file manager using <code class="docutils literal notranslate"><span class="pre">print</span></code> command<a class="headerlink" href="#show-file-manager-using-print-command" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="change-value-of-summerlai-in-trial-parameters">
+<h3>3.2 Change value of  <code class="docutils literal notranslate"><span class="pre">summerLAI</span></code> in trial parameters<a class="headerlink" href="#change-value-of-summerlai-in-trial-parameters" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">assign_trial_params</span><span class="p">(</span><span class="s1">&#39;summerLAI&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">trial_params</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>controlVersion                       &#39;SUMMA_FILE_MANAGER_V3.0.0&#39;
-simStartTime                         &#39;2006-07-01 00:00&#39;
-simEndTime                           &#39;2007-09-30 00:00&#39;
-tmZoneInfo                           &#39;localTime&#39;
-settingsPath                         &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39;
-forcingPath                          &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39;
-outputPath                           &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/output/&#39;
-decisionsFile                        &#39;summa_zDecisions_riparianAspenSimpleResistance.txt&#39;
-outputControlFile                    &#39;meta/Model_Output.txt&#39;
-globalHruParamFile                   &#39;summa_zLocalParamInfo.txt&#39;
-globalGruParamFile                   &#39;summa_zBasinParamInfo.txt&#39;
-attributeFile                        &#39;summa_zLocalAttributes_riparianAspen.nc&#39;
-trialParamFile                       &#39;summa_zParamTrial_riparianAspen.nc&#39;
-forcingListFile                      &#39;summa_zForcingFileList_riparianAspen.txt&#39;
-initConditionFile                    &#39;summa_zInitialCond.nc&#39;
-outFilePrefix                        &#39;vegImpactsTranspire&#39;
-vegTableFile                         &#39;VEGPARM.TBL&#39;
-soilTableFile                        &#39;SOILPARM.TBL&#39;
-generalTableFile                     &#39;GENPARM.TBL&#39;
-noahmpTableFile                      &#39;MPTABLE.TBL&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
+Dimensions:             (hru: 1)
+Dimensions without coordinates: hru
+Data variables:
+    hruIndex            (hru) float64 1.001e+03
+    frozenPrecipMultip  (hru) float64 1.0
+    theta_mp            (hru) float64 0.2211
+    theta_sat           (hru) float64 0.4792
+    theta_res           (hru) float64 0.1
+    vGn_alpha           (hru) float64 -0.858
+    vGn_n               (hru) float64 1.306
+    f_impede            (hru) float64 0.0
+    k_soil              (hru) float64 3.53e-06
+    k_macropore         (hru) float64 0.06255
+    critSoilWilting     (hru) float64 0.125
+    critSoilTranspire   (hru) float64 0.2
+    winterSAI           (hru) float64 0.45
+    summerLAI           (hru) float64 2.0
+    heightCanopyTop     (hru) float64 9.5
+    heightCanopyBottom  (hru) float64 3.0
+    kAnisotropic        (hru) float64 1.0
+    rootDistExp         (hru) float64 1.0
+    zScale_TOPMODEL     (hru) float64 4.057
+    qSurfScale          (hru) float64 84.06
+Attributes:
+    history:  Converted to NetCDF using &quot;/Users/nijssen/Dropbox/data/PLUMBER/...
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="get-value-of-each-line-in-file-manager">
-<h3>3.3 Get value of each line in file manager<a class="headerlink" href="#get-value-of-each-line-in-file-manager" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="explore-output-control-text-file">
+<h2>4. Explore Output control text file<a class="headerlink" href="#explore-output-control-text-file" title="Permalink to this headline">¶</a></h2>
+<p>The output control file is an ASCII file that specifies which variables are retained in the SUMMA output files. The output control file is parsed by <strong><code class="docutils literal notranslate"><span class="pre">build/source/dshare/popMetadat.f90:read_output_file()</span></code></strong></p>
+<p>SUMMA is pretty flexible in its output. There are many variables that you can output and for most of them you can also choose to record summary statistics. For example, you can configure the model to run with meteorological forcings that are defined every hour, but only save summary output with a daily time step. This flexibility comes at the small price that you need to be clear in specifying what output you want.</p>
+<p>The output control file includes a listing of model variables that you would like to store, with one model variable per line. The variables that are available for output are the individual entries in the data structures specified in <strong><code class="docutils literal notranslate"><span class="pre">build/source/dshare/var_lookup.f90</span></code></strong>. Because there are many, there is not much point in repeating them here, but we direct the user to the model code. Any of the variables specified in the following structures can be specified in the output control file: <strong><code class="docutils literal notranslate"><span class="pre">iLook_time</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_force</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_attr</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_type</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_param</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_index</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_prog</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_diag</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_flux</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_bpar</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_bvar</span></code>, <code class="docutils literal notranslate"><span class="pre">iLook_deriv</span></code></strong>. SUMMA will print an error message if a specific variable cannot be output, so the faster way may be to select any variable in <strong><code class="docutils literal notranslate"><span class="pre">build/source/dshare/var_lookup.f90</span></code></strong> and remove it if it is not available for output. In addition, some of the variables may only be useful for debugging use, but that is up to the user.</p>
+<p>At a minimum, each line in the output control file will contain two fields, separated by a <strong><code class="docutils literal notranslate"><span class="pre">|</span></code></strong>. The first field will be the variable name as specified in <strong><code class="docutils literal notranslate"><span class="pre">build/source/dshare/var_lookup.f90</span></code></strong> (case-sensitive). The second field will be the frequency of the model output specified as a multiple of the time resolution in the model forcing files. Thus, if you want to output data for every forcing time step, then this value should be equal to 1. If you want daily output and your forcing frequency is 3 hours, then this value should be equal to 8. Note that you can specify different output frequencies for separate variables, but at this time you can specify only a single output frequency for each variable. For example, you can store <strong><code class="docutils literal notranslate"><span class="pre">scalarSenHeatTotal</span></code></strong> with an output frequency of 1 and <strong><code class="docutils literal notranslate"><span class="pre">scalarLatHeatTotal</span></code></strong> with an output frequency of 8, but you cannot specify two different output frequencies for <strong><code class="docutils literal notranslate"><span class="pre">scalarSenHeatTotal</span></code></strong>.</p>
+<p>For most variables you can also output a statistical summary if you output variables at a lower frequency than your forcing frequency. To do this, you extend the number of fields you specify in the output control file, with all fields separated by a <strong><code class="docutils literal notranslate"><span class="pre">|</span></code></strong>. For the fields after the first two, you specify a series of 0’s and 1’s, which indicate that a specific statistic should not (0) or should be stored (1). The available statistics are (in order) the instantaneous value, the sum over the interval, the mean, the variance, the minimum, the maximum and the mode. So, a complete line in the output control file would be</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="n">varName</span>            <span class="o">|</span> <span class="n">outFreq</span> <span class="o">|</span> <span class="n">inst</span> <span class="o">|</span> <span class="nb">sum</span> <span class="o">|</span> <span class="n">mean</span> <span class="o">|</span> <span class="n">var</span> <span class="o">|</span> <span class="nb">min</span> <span class="o">|</span> <span class="nb">max</span> <span class="o">|</span> <span class="n">mode</span>
+<span class="o">|</span> <span class="n">scalarSenHeatTotal</span> <span class="o">|</span> <span class="mi">24</span>      <span class="o">|</span> <span class="mi">0</span>    <span class="o">|</span> <span class="mi">1</span>   <span class="o">|</span> <span class="mi">1</span>    <span class="o">|</span> <span class="mi">0</span>   <span class="o">|</span> <span class="mi">1</span>   <span class="o">|</span> <span class="mi">1</span>   <span class="o">|</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>In this example, the first line is a comment (starts with <code class="docutils literal notranslate"><span class="pre">!</span></code>) and then the sum, mean, min, max are calculated for <strong><code class="docutils literal notranslate"><span class="pre">scalarSenHeatTotal</span></code></strong> across 24 forcing time steps and written to the output file.</p>
+<br>
+<div class="section" id="modifying-output">
+<h3>Modifying output<a class="headerlink" href="#modifying-output" title="Permalink to this headline">¶</a></h3>
+<p>And one more, we can also modify what get’s written to output.
+The output control file represents the options available through columns of numeric values.
+These numbers represent how to write the output.
+From the SUMMA documentation they are arranged as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! varName          | outFreq | inst | sum | mean | var | min | max | mode
+</pre></div>
+</div>
+<p>As before, let’s look at what’s in the <code class="docutils literal notranslate"><span class="pre">output_control</span></code> by simply printing it out.</p>
+<br></div>
+<div class="section" id="show-output-control-file-using-print-command">
+<h3>4.1 Show output control file using <code class="docutils literal notranslate"><span class="pre">print</span></code> command<a class="headerlink" href="#show-output-control-file-using-print-command" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;settingsPath&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;forcingPath&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;attributeFile&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;summa_zLocalAttributes_riparianAspen.nc&#39;
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="change-the-value-of-each-line-in-file-manager">
-<h3>3.4 Change the value of each line in file manager<a class="headerlink" href="#change-the-value-of-each-line-in-file-manager" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the current value of simStartTime</span>
-<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2006-07-01 00:00&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set different value of simStartTime</span>
-<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;[notUsed]&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[notUsed]&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># another way to set different value of simStartTime</span>
-<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;2006-07-01 00:00&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">[</span><span class="s1">&#39;simStartTime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2006-07-01 00:00&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># overwirte the current value of meta_time in file manger</span>
-<span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the changed value of meta_time in file manger</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>controlVersion                       &#39;SUMMA_FILE_MANAGER_V3.0.0&#39;
-simStartTime                         &#39;2006-07-01 00:00&#39;
-simEndTime                           &#39;2007-09-30 00:00&#39;
-tmZoneInfo                           &#39;localTime&#39;
-settingsPath                         &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/&#39;
-forcingPath                          &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/&#39;
-outputPath                           &#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/output/&#39;
-decisionsFile                        &#39;summa_zDecisions_riparianAspenSimpleResistance.txt&#39;
-outputControlFile                    &#39;meta/Model_Output.txt&#39;
-globalHruParamFile                   &#39;summa_zLocalParamInfo.txt&#39;
-globalGruParamFile                   &#39;summa_zBasinParamInfo.txt&#39;
-attributeFile                        &#39;summa_zLocalAttributes_riparianAspen.nc&#39;
-trialParamFile                       &#39;summa_zParamTrial_riparianAspen.nc&#39;
-forcingListFile                      &#39;summa_zForcingFileList_riparianAspen.txt&#39;
-initConditionFile                    &#39;summa_zInitialCond.nc&#39;
-outFilePrefix                        &#39;vegImpactsTranspire&#39;
-vegTableFile                         &#39;VEGPARM.TBL&#39;
-soilTableFile                        &#39;SOILPARM.TBL&#39;
-generalTableFile                     &#39;GENPARM.TBL&#39;
-noahmpTableFile                      &#39;MPTABLE.TBL&#39;
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="look-at-other-configuration-files-using-manager-modules">
-<h3>3.5 Look at other configuration files using manager modules<a class="headerlink" href="#look-at-other-configuration-files-using-manager-modules" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read decision text file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>soilCatTbl    ROSETTA              ! soil-category dataset
-vegeParTbl    USGS                 ! vegetation-category dataset
-soilStress    NoahType             ! choice of function for the soil moisture control on stomatal resistance
-stomResist    simpleResistance     ! choice of function for stomatal resistance
-num_method    itertive             ! choice of numerical method
-fDerivMeth    analytic             ! choice of method to calculate flux derivatives
-LAI_method    specified            ! choice of method to determine LAI and SAI
-f_Richards    mixdform             ! form of Richards equation
-groundwatr    noXplict             ! choice of groundwater parameterization
-hc_profile    constant             ! choice of hydraulic conductivity profile
-bcUpprTdyn    nrg_flux             ! type of upper boundary condition for thermodynamics
-bcLowrTdyn    zeroFlux             ! type of lower boundary condition for thermodynamics
-bcUpprSoiH    liq_flux             ! type of upper boundary condition for soil hydrology
-bcLowrSoiH    drainage             ! type of lower boundary condition for soil hydrology
-veg_traits    CM_QJRMS1988         ! choice of parameterization for vegetation roughness length and displacement height
-canopyEmis    difTrans             ! choice of parameterization for canopy emissivity
-snowIncept    lightSnow            ! choice of parameterization for snow interception
-windPrfile    logBelowCanopy       ! choice of canopy wind profile
-astability    louisinv             ! choice of stability function
-canopySrad    BeersLaw             ! choice of method for canopy shortwave radiation
-alb_method    varDecay             ! choice of albedo representation
-compaction    anderson             ! choice of compaction routine
-snowLayers    CLM_2010             ! choice of method to combine and sub-divide snow layers
-thCondSnow    jrdn1991             ! choice of thermal conductivity representation for snow
-thCondSoil    mixConstit           ! choice of thermal conductivity representation for soil
-spatial_gw    localColumn          ! choice of method for spatial representation of groundwater
-subRouting    timeDlay             ! choice of method for sub-grid routing
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read output control text file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -867,313 +739,59 @@ averageRoutedRunoff                  | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="show-value-of-scalarlatheattotal-in-output-control-text-file">
+<h3>4.2 Show value of  <code class="docutils literal notranslate"><span class="pre">scalarLatHeatTotal</span></code> in output control text file<a class="headerlink" href="#show-value-of-scalarlatheattotal-in-output-control-text-file" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read local param info text file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">global_hru_params</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">[</span><span class="s1">&#39;scalarLatHeatTotal&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>upperBoundHead            |      -7.5d-1 |      -1.0d+2 |      -1.0d-2
-lowerBoundHead            |       0.0000 |      -1.0d+2 |      -1.0d-2
-upperBoundTheta           |       0.2004 |       0.1020 |       0.3680
-lowerBoundTheta           |       0.1100 |       0.1020 |       0.3680
-upperBoundTemp            |     272.1600 |     270.1600 |     280.1600
-lowerBoundTemp            |     274.1600 |     270.1600 |     280.1600
-tempCritRain              |     273.1600 |     272.1600 |     274.1600
-tempRangeTimestep         |       2.0000 |       0.5000 |       5.0000
-frozenPrecipMultip        |       1.0000 |       0.5000 |       1.5000
-snowfrz_scale             |      50.0000 |      10.0000 |    1000.0000
-fixedThermalCond_snow     |       0.3500 |       0.1000 |       1.0000
-albedoMax                 |       0.8400 |       0.7000 |       0.9500
-albedoMinWinter           |       0.5500 |       0.6000 |       1.0000
-albedoMinSpring           |       0.5500 |       0.3000 |       1.0000
-albedoMaxVisible          |       0.9500 |       0.7000 |       0.9500
-albedoMinVisible          |       0.7500 |       0.5000 |       0.7500
-albedoMaxNearIR           |       0.6500 |       0.5000 |       0.7500
-albedoMinNearIR           |       0.3000 |       0.1500 |       0.4500
-albedoDecayRate           |       1.0d+6 |       1.0d+5 |       5.0d+6
-albedoSootLoad            |       0.3000 |       0.1000 |       0.5000
-albedoRefresh             |       1.0000 |       1.0000 |      10.0000
-radExt_snow               |      20.0000 |      20.0000 |      20.0000
-directScale               |       0.0900 |       0.0000 |       0.5000
-Frad_direct               |       0.7000 |       0.0000 |       1.0000
-Frad_vis                  |       0.5000 |       0.0000 |       1.0000
-newSnowDenMin             |     100.0000 |      50.0000 |     100.0000
-newSnowDenMult            |     100.0000 |      25.0000 |      75.0000
-newSnowDenScal            |       5.0000 |       1.0000 |       5.0000
-constSnowDen              |     100.0000 |      50.0000 |     250.0000
-newSnowDenAdd             |     109.0000 |      80.0000 |     120.0000
-newSnowDenMultTemp        |       6.0000 |       1.0000 |      12.0000
-newSnowDenMultWind        |      26.0000 |      16.0000 |      36.0000
-newSnowDenMultAnd         |       1.0000 |       1.0000 |       3.0000
-newSnowDenBase            |       0.0000 |       0.0000 |       0.0000
-densScalGrowth            |       0.0460 |       0.0230 |       0.0920
-tempScalGrowth            |       0.0400 |       0.0200 |       0.0600
-grainGrowthRate           |       2.7d-6 |       1.0d-6 |       5.0d-6
-densScalOvrbdn            |       0.0230 |       0.0115 |       0.0460
-tempScalOvrbdn            |       0.0800 |       0.6000 |       1.0000
-baseViscosity             |       9.0d+5 |       5.0d+5 |       1.5d+6
-Fcapil                    |       0.0600 |       0.0100 |       0.1000
-k_snow                    |       0.0150 |       0.0050 |       0.0500
-mw_exp                    |       3.0000 |       1.0000 |       5.0000
-z0Snow                    |       0.0010 |       0.0010 |      10.0000
-z0Soil                    |       0.0100 |       0.0010 |      10.0000
-z0Canopy                  |       0.1000 |       0.0010 |      10.0000
-zpdFraction               |       0.6500 |       0.5000 |       0.8500
-critRichNumber            |       0.2000 |       0.1000 |       1.0000
-Louis79_bparam            |       9.4000 |       9.2000 |       9.6000
-Louis79_cStar             |       5.3000 |       5.1000 |       5.5000
-Mahrt87_eScale            |       1.0000 |       0.5000 |       2.0000
-leafExchangeCoeff         |       0.0100 |       0.0010 |       0.1000
-windReductionParam        |       0.2800 |       0.0000 |       1.0000
-Kc25                      |     296.0770 |     296.0770 |     296.0770
-Ko25                      |       0.2961 |       0.2961 |       0.2961
-Kc_qFac                   |       2.1000 |       2.1000 |       2.1000
-Ko_qFac                   |       1.2000 |       1.2000 |       1.2000
-kc_Ha                     |       7.9d+4 |       7.9d+4 |       7.9d+4
-ko_Ha                     |       3.6d+4 |       3.6d+4 |       3.6d+4
-vcmax25_canopyTop         |      40.0000 |      20.0000 |     100.0000
-vcmax_qFac                |       2.4000 |       2.4000 |       2.4000
-vcmax_Ha                  |       6.5d+4 |       6.5d+4 |       6.5d+4
-vcmax_Hd                  |       2.2d+5 |       1.5d+5 |       1.5d+5
-vcmax_Sv                  |     710.0000 |     485.0000 |     485.0000
-vcmax_Kn                  |       0.6000 |       0.0000 |       1.2000
-jmax25_scale              |       2.0000 |       2.0000 |       2.0000
-jmax_Ha                   |       4.4d+4 |       4.4d+4 |       4.4d+4
-jmax_Hd                   |       1.5d+5 |       1.5d+5 |       1.5d+5
-jmax_Sv                   |     495.0000 |     495.0000 |     495.0000
-fractionJ                 |       0.1500 |       0.1500 |       0.1500
-quantamYield              |       0.0500 |       0.0500 |       0.0500
-vpScaleFactor             |    1500.0000 |    1500.0000 |    1500.0000
-cond2photo_slope          |       9.0000 |       1.0000 |      10.0000
-minStomatalConductance    |    2000.0000 |    2000.0000 |    2000.0000
-winterSAI                 |       1.0000 |       0.0100 |       3.0000
-summerLAI                 |       3.0000 |       0.0100 |      10.0000
-rootScaleFactor1          |       2.0000 |       1.0000 |      10.0000
-rootScaleFactor2          |       5.0000 |       1.0000 |      10.0000
-rootingDepth              |       2.0000 |       0.0100 |      10.0000
-rootDistExp               |       1.0000 |       0.0100 |       1.0000
-plantWiltPsi              |      -1.5d+2 |      -5.0d+2 |       0.0000
-soilStressParam           |       5.8000 |       4.3600 |       6.3700
-critSoilWilting           |       0.0750 |       0.0000 |       1.0000
-critSoilTranspire         |       0.1750 |       0.0000 |       1.0000
-critAquiferTranspire      |       0.2000 |       0.1000 |      10.0000
-minStomatalResistance     |      50.0000 |      10.0000 |     200.0000
-leafDimension             |       0.0400 |       0.0100 |       0.1000
-heightCanopyTop           |      20.0000 |       0.0500 |     100.0000
-heightCanopyBottom        |       2.0000 |       0.0000 |       5.0000
-specificHeatVeg           |     874.0000 |     500.0000 |    1500.0000
-maxMassVegetation         |      25.0000 |       1.0000 |      50.0000
-throughfallScaleSnow      |       0.5000 |       0.1000 |       0.9000
-throughfallScaleRain      |       0.5000 |       0.1000 |       0.9000
-refInterceptCapSnow       |       6.6000 |       1.0000 |      10.0000
-refInterceptCapRain       |       1.0000 |       0.0100 |       1.0000
-snowUnloadingCoeff        |       0.0000 |       0.0000 |       1.5d-6
-canopyDrainageCoeff       |       0.0050 |       0.0010 |       0.0100
-ratioDrip2Unloading       |       0.4000 |       0.0000 |       1.0000
-canopyWettingFactor       |       0.7000 |       0.0000 |       1.0000
-canopyWettingExp          |       1.0000 |       0.0000 |       1.0000
-soil_dens_intr            |    2700.0000 |     500.0000 |    4000.0000
-thCond_soil               |       5.5000 |       2.9000 |       8.4000
-frac_sand                 |       0.1600 |       0.0000 |       1.0000
-frac_silt                 |       0.2800 |       0.0000 |       1.0000
-frac_clay                 |       0.5600 |       0.0000 |       1.0000
-fieldCapacity             |       0.2000 |       0.0000 |       1.0000
-wettingFrontSuction       |       0.3000 |       0.1000 |       1.5000
-theta_mp                  |       0.4010 |       0.3000 |       0.6000
-theta_sat                 |       0.5500 |       0.3000 |       0.6000
-theta_res                 |       0.1390 |       0.0010 |       0.1000
-vGn_alpha                 |      -8.4d-1 |      -1.0d+0 |      -1.0d-2
-vGn_n                     |       1.3000 |       1.0000 |       3.0000
-mpExp                     |       5.0000 |       1.0000 |      10.0000
-k_soil                    |       7.5d-6 |       1.0d-7 |       1.0d-5
-k_macropore               |       0.0010 |       1.0d-7 |       1.0d-5
-kAnisotropic              |       1.0000 |       0.0001 |      10.0000
-zScale_TOPMODEL           |       2.5000 |       0.1000 |     100.0000
-compactedDepth            |       1.0000 |       0.0000 |       1.0000
-aquiferScaleFactor        |       0.3500 |       0.1000 |     100.0000
-aquiferBaseflowExp        |       2.0000 |       1.0000 |      10.0000
-aquiferBaseflowRate       |       2.0000 |       1.0000 |      10.0000
-qSurfScale                |      50.0000 |       1.0000 |     100.0000
-specificYield             |       0.2000 |       0.1000 |       0.3000
-specificStorage           |       1.0d-9 |       1.0d-5 |       1.0d-7
-f_impede                  |       2.0000 |       1.0000 |      10.0000
-soilIceScale              |       0.1300 |       0.0001 |       1.0000
-soilIceCV                 |       0.4500 |       0.1000 |       5.0000
-minwind                   |       0.1000 |       0.0010 |       1.0000
-minstep                   |       1.0000 |       1.0000 |    1800.0000
-maxstep                   |    3600.0000 |      60.0000 |    1800.0000
-wimplicit                 |       0.0000 |       0.0000 |       1.0000
-maxiter                   |     100.0000 |       1.0000 |     100.0000
-relConvTol_liquid         |       0.0010 |       1.0d-5 |       0.1000
-absConvTol_liquid         |       1.0d-6 |       1.0d-8 |       0.0010
-relConvTol_matric         |       1.0d-6 |       1.0d-5 |       0.1000
-absConvTol_matric         |       1.0d-6 |       1.0d-8 |       0.0010
-relConvTol_energy         |       0.0100 |       1.0d-5 |       0.1000
-absConvTol_energy         |       1.0000 |       0.0100 |      10.0000
-relConvTol_aquifr         |       1.0000 |       0.0100 |      10.0000
-absConvTol_aquifr         |       1.0d-5 |       1.0d-5 |       0.1000
-zmin                      |       0.0100 |       0.0050 |       0.1000
-zmax                      |       0.0500 |       0.0100 |       0.5000
-zminLayer1                |       0.0075 |       0.0075 |       0.0075
-zminLayer2                |       0.0100 |       0.0100 |       0.0100
-zminLayer3                |       0.0500 |       0.0500 |       0.0500
-zminLayer4                |       0.1000 |       0.1000 |       0.1000
-zminLayer5                |       0.2500 |       0.2500 |       0.2500
-zmaxLayer1_lower          |       0.0500 |       0.0500 |       0.0500
-zmaxLayer2_lower          |       0.2000 |       0.2000 |       0.2000
-zmaxLayer3_lower          |       0.5000 |       0.5000 |       0.5000
-zmaxLayer4_lower          |       1.0000 |       1.0000 |       1.0000
-zmaxLayer1_upper          |       0.0300 |       0.0300 |       0.0300
-zmaxLayer2_upper          |       0.1500 |       0.1500 |       0.1500
-zmaxLayer3_upper          |       0.3000 |       0.3000 |       0.3000
-zmaxLayer4_upper          |       0.7500 |       0.7500 |       0.7500
-minTempUnloading          |     270.1600 |     260.1600 |     273.1600
-minWindUnloading          |       0.0000 |       0.0000 |      10.0000
-rateTempUnloading         |       1.9d+5 |       1.0d+5 |       3.0d+5
-rateWindUnloading         |       1.6d+5 |       1.0d+5 |       3.0d+5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scalarLatHeatTotal                   | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="change-value-of-scalarlatheattotal-in-output-control-text-file">
+<h3>4.3 Change value of  <code class="docutils literal notranslate"><span class="pre">scalarLatHeatTotal</span></code> in output control text file<a class="headerlink" href="#change-value-of-scalarlatheattotal-in-output-control-text-file" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read basin param info text file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">global_gru_params</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the output statistic from hourly instantaneous to daily total</span>
+<span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">[</span><span class="s1">&#39;scalarLatHeatTotal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">[</span><span class="s1">&#39;scalarLatHeatTotal&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>basin__aquiferHydCond     |       0.0100 |       0.0001 |      10.0000
-basin__aquiferScaleFactor |       3.5000 |       0.1000 |     100.0000
-basin__aquiferBaseflowExp |       5.0000 |       1.0000 |      10.0000
-routingGammaShape         |       2.5000 |       2.0000 |       3.0000
-routingGammaScale         |       2.0d+4 |       1.0000 |       5.0d+6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scalarLatHeatTotal                   | 24 | 1 | 0 | 0 | 0 | 0 | 0 | 0
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="change-value-of-scalarlatheattotal-back-in-output-control-text-file">
+<h3>4.4 Change value of  <code class="docutils literal notranslate"><span class="pre">scalarLatHeatTotal</span></code>  back in output control text file<a class="headerlink" href="#change-value-of-scalarlatheattotal-back-in-output-control-text-file" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read forcing file list</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">[</span><span class="s1">&#39;scalarLatHeatTotal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">output_control</span><span class="p">[</span><span class="s1">&#39;scalarLatHeatTotal&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;forcing_above_aspen.nc&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scalarLatHeatTotal                   | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read local attributes netCDF file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">local_attributes</span><span class="p">)</span>
-</pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
-Dimensions:         (gru: 1, hru: 1)
-Dimensions without coordinates: gru, hru
-Data variables:
-    hru2gruId       (hru) int32 1001
-    downHRUindex    (hru) int32 0
-    slopeTypeIndex  (hru) int32 1
-    soilTypeIndex   (hru) int32 8
-    vegTypeIndex    (hru) int32 11
-    mHeight         (hru) float64 19.25
-    contourLength   (hru) float64 180.8
-    tan_slope       (hru) float64 0.2083
-    elevation       (hru) float64 2.097e+03
-    longitude       (hru) float64 243.2
-    latitude        (hru) float64 43.2
-    HRUarea         (hru) float64 3.27e+04
-    hruId           (hru) int32 1001
-    gruId           (gru) int32 1001
-Attributes:
-    datasource:  *zLocalAttributes*
-    history:     Tue Sep 27 21:51:50 2016: ncrename -d nhru,hru -d ngru,gru ....
-    NCO:         &quot;4.6.0&quot;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read parameter trial netCDF file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">trial_params</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
-Dimensions:             (hru: 1)
-Dimensions without coordinates: hru
-Data variables:
-    hruIndex            (hru) float64 1.001e+03
-    frozenPrecipMultip  (hru) float64 1.0
-    theta_mp            (hru) float64 0.2211
-    theta_sat           (hru) float64 0.4792
-    theta_res           (hru) float64 0.1
-    vGn_alpha           (hru) float64 -0.858
-    vGn_n               (hru) float64 1.306
-    f_impede            (hru) float64 0.0
-    k_soil              (hru) float64 3.53e-06
-    k_macropore         (hru) float64 0.06255
-    critSoilWilting     (hru) float64 0.125
-    critSoilTranspire   (hru) float64 0.2
-    winterSAI           (hru) float64 0.45
-    summerLAI           (hru) float64 2.5
-    heightCanopyTop     (hru) float64 9.5
-    heightCanopyBottom  (hru) float64 3.0
-    kAnisotropic        (hru) float64 1.0
-    rootDistExp         (hru) float64 1.0
-    zScale_TOPMODEL     (hru) float64 4.057
-    qSurfScale          (hru) float64 84.06
-Attributes:
-    history:  Converted to NetCDF using &quot;/Users/nijssen/Dropbox/data/PLUMBER/...
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read parameter trial netCDF file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">initial_conditions</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
-Dimensions:               (hru: 1, ifcToto: 9, midSoil: 8, midToto: 8, scalarv: 1)
-Dimensions without coordinates: hru, ifcToto, midSoil, midToto, scalarv
-Data variables:
-    mLayerVolFracIce      (midToto, hru) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
-    scalarCanairTemp      (scalarv, hru) float64 286.0
-    nSnow                 (scalarv, hru) int64 0
-    iLayerHeight          (ifcToto, hru) float64 0.0 0.025 0.1 ... 1.5 2.5 4.0
-    mLayerMatricHead      (midSoil, hru) float64 -100.0 -100.0 ... -100.0 -100.0
-    scalarSnowAlbedo      (scalarv, hru) float64 0.82
-    dt_init               (scalarv, hru) float64 360.0
-    mLayerTemp            (midToto, hru) float64 288.5 288.5 ... 288.5 288.5
-    scalarSfcMeltPond     (scalarv, hru) float64 0.0
-    scalarCanopyTemp      (scalarv, hru) float64 290.0
-    scalarSnowDepth       (scalarv, hru) float64 0.0
-    nSoil                 (scalarv, hru) int64 8
-    scalarSWE             (scalarv, hru) float64 0.0
-    scalarCanopyLiq       (scalarv, hru) float64 3.16
-    mLayerVolFracLiq      (midToto, hru) float64 0.29 0.29 0.29 ... 0.29 0.29
-    mLayerDepth           (midToto, hru) float64 0.025 0.075 0.15 ... 1.0 1.5
-    scalarCanopyIce       (scalarv, hru) float64 0.0
-    scalarAquiferStorage  (scalarv, hru) float64 0.0
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="explore-noah-mp-tables-text-file">
+<h2>5. Explore Noah-MP tables text file<a class="headerlink" href="#explore-noah-mp-tables-text-file" title="Permalink to this headline">¶</a></h2>
+<p>SUMMA uses some of the input files and routines from the Noah-MP Land Surface Model (LSM). These routines are mostly contained in the <strong><code class="docutils literal notranslate"><span class="pre">build/source/noah-mp</span></code></strong> directory, although a few can be found elsewhere in the code as well. For example, the code that parses the Noah-MP tables is in <strong><code class="docutils literal notranslate"><span class="pre">build/source/driver/multi_driver.f90:SOIL_VEG_GEN_PARM()</span></code></strong>. The names of these tables is hard-wired (since that it is how this is implemented in Noah-MP). The file path for these tables is constructed as <strong><code class="docutils literal notranslate"><span class="pre">&lt;SETNGS_PATH&gt;/&lt;NOAH_TABLE&gt;</span></code></strong>, where <strong><code class="docutils literal notranslate"><span class="pre">SETNGS_PATH</span></code></strong> is defined in the master configuration file and <strong><code class="docutils literal notranslate"><span class="pre">NOAH_TABLE</span></code></strong> is <strong><code class="docutils literal notranslate"><span class="pre">VEGPARM.TBL</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">SOILPARM.TBL</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">GENPARM.TBL</span></code></strong>. The format for these files remains unchanged from their specification in Noah-MP, see here for an example. The parameter values in the Noah-MP overwrite the default values that have already been specified based on soil and vegetation type.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">genparm</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">genparm</span><span class="p">:</span>
@@ -1722,7 +1340,6 @@ NATURAL
 </div>
 </div>
 </div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1752,8 +1369,8 @@ NATURAL
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">Content with notebooks</a>
-    <a class='right-next' id="next-link" href="B.%20Explore%20decision%20file%20of%20SUMMA%203.0.0.html" title="next page">B. Explore decision file of SUMMA 3.0.0</a>
+    <a class='left-prev' id="prev-link" href="D.%20Explore%20local%20attributes%2C%20local%20parameters%20%28global%20hru%29%20and%20basin%20parameters%20%28global%20gru%29%20of%20SUMMA%203.0.html" title="previous page">D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0</a>
+    <a class='right-next' id="next-link" href="F.%20Explore%20Initial%20conditions%20restart%20or%20state%20file.html" title="next page">F. Explore Initial conditions restart or state file of SUMMA 3.0.0</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

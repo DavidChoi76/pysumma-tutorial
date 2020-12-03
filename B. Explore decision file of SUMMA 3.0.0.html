@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B. Explore decision file of SUMMA 3.0.0 &#8212; pySUMMA Tutorial Jupyter Notebooks</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="C. Explore forcing data of SUMMA 3.0.0" href="C.%20Explore%20forcing%20data%20of%20SUMMA%203.0.0.html" />
+    <link rel="prev" title="A. Explore file manger of SUMMA 3.0.0" href="A.%20Explore%20file%20manger%20of%20SUMMA%203.0.3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">pySUMMA Tutorial Jupyter Notebooks</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to pySUMMA Tutorial Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="A.%20Explore%20file%20manger%20of%20SUMMA%203.0.3.html">
+     A. Explore file manger of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     B. Explore decision file of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C.%20Explore%20forcing%20data%20of%20SUMMA%203.0.0.html">
+     C. Explore forcing data of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="D.%20Explore%20local%20attributes%2C%20local%20parameters%20%28global%20hru%29%20and%20basin%20parameters%20%28global%20gru%29%20of%20SUMMA%203.0.html">
+     D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="E.%20Explore%20Trial%20parameters%2C%20Output%20control%20and%20Noah-MP%20tables%20of%20SUMMA%203.0.html">
+     E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="F.%20Explore%20Initial%20conditions%20restart%20or%20state%20file.html">
+     F. Explore Initial conditions restart or state file of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html">
+     G-1. SUMMA simulation using Output Control
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#explore-forcing-file-list">
+     3. Explore Forcing file list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#explore-output-control-text-file">
+     4. Explore Output control text file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html">
+     G-2. Ensemble simulation using different parameterizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html#ensemble-simulations-using-different-parameterizations-decision-files">
+     3. Ensemble Simulations using Different Parameterizations (decision files)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html">
+     G-1. Ensemble simulation using different values of a Local Parameters (Global HRU)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html#ensemble-simulations-using-different-local-parameters-global-hru">
+     3. Ensemble Simulations using Different Local Parameters (Global HRU)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html">
+     G-4. Ensemble simulation using different values of a Local Attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html#ensemble-simulations-using-different-local-attributes">
+     3. Ensemble Simulations using Different Local Attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html">
+     G-5. Ensemble simulation using different values of a Trial Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html#ensemble-simulations-using-different-trial-parameters">
+     3. Ensemble Simulations using Different Trial Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html">
+     G-6. Ensemble simulation using different file manager files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html#ensemble-simulations-using-different-file-manager-files">
+     3. Ensemble Simulations using Different file manager files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html">
+     G-7. Ensemble simulation using different decisions and parameter trials setting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html#ensemble-simulations-using-different-decisions-and-parameter-trials-setting">
+     3. Ensemble Simulations using different decisions and parameter trials setting
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/B. Explore decision file of SUMMA 3.0.0.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DavidChoi76/pysumma-tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DavidChoi76/pysumma-tutorial/issues/new?title=Issue%20on%20page%20%2FB. Explore decision file of SUMMA 3.0.0.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DavidChoi76/pysumma-tutorial/master?urlpath=tree/docs/B. Explore decision file of SUMMA 3.0.0.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-pysumma-3-0-0">
+   1. Import pySUMMA 3.0.0
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-simulatioin-object">
+   2. Create Simulatioin Object
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explore-decision-file">
+   3. Explore decision file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-decision-file-from-decisions-json-in-meta-folder-review-every-available-options">
+     3.1 Show decision file from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       decisions.json
+      </span>
+     </code>
+     in meta folder (review every available options)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-decision-file-using-orginal-contents-attribute">
+     3.2 Show decision file using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       orginal_contents
+      </span>
+     </code>
+     attribute
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-decision-file-using-print-command">
+     3.3 Show decision file using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       print
+      </span>
+     </code>
+     command
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-value-of-each-line-in-decision-file">
+     3.4 Get value of each line in decision file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-the-value-of-each-line-in-decision-file">
+     3.5 Change the value of each line in decision file
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="b-explore-decision-file-of-summa-3-0-0">
+<h1>B. Explore decision file of SUMMA 3.0.0<a class="headerlink" href="#b-explore-decision-file-of-summa-3-0-0" title="Permalink to this headline">¶</a></h1>
+<p>The model <strong><code class="docutils literal notranslate"><span class="pre">decisions</span></code></strong> file is an <strong>ASCII file</strong> that indicates the model decisions with which SUMMA is configured. The model decisions file is parsed by <strong><code class="docutils literal notranslate"><span class="pre">build/source/engine/mDecisions.f90</span></code></strong>, which also serves as the file of record for all available options for the individual model decisions. The names for the model decisions are found in <strong><code class="docutils literal notranslate"><span class="pre">build/source/dshare/get_ixname.f90:function</span> <span class="pre">get_ixdecisions(varName)</span></code></strong>. Detailed information about the individual model decisions and their associated options can be found in the configuration section.</p>
+<p>Model decisions can be specified in any order with one decision per line. The decisions take the form <strong><code class="docutils literal notranslate"><span class="pre">&lt;keyword&gt;</span> <span class="pre">&lt;value&gt;</span></code></strong>, where <strong><code class="docutils literal notranslate"><span class="pre">&lt;keyword&gt;</span></code></strong> is the decision to be made and <strong><code class="docutils literal notranslate"><span class="pre">&lt;value&gt;</span></code></strong> is the option that is selected for that decision. For example, the line <strong><code class="docutils literal notranslate"><span class="pre">f_Richards</span> <span class="pre">mixdform</span></code></strong> indicates that the mixed form of the Richards’s equation (unsaturated/saturated flow) should be used in the simulation(<strong><code class="docutils literal notranslate"><span class="pre">mixdform</span></code></strong> option for the <strong><code class="docutils literal notranslate"><span class="pre">f_Richards</span></code></strong> decision). Another option for this model decision would be <strong><code class="docutils literal notranslate"><span class="pre">moisture</span></code></strong>, which would be the moisture-based form (only unsaturated flow).</p>
+<p>The model decisions and their options or values are listed in the following tables. Note that the decisions and their options are case sensitive. For details about each option see the configuration section.</p>
+<div class="section" id="import-pysumma-3-0-0">
+<h2>1. Import pySUMMA 3.0.0<a class="headerlink" href="#import-pysumma-3-0-0" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pysumma</span> <span class="k">as</span> <span class="nn">ps</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-simulatioin-object">
+<h2>2. Create Simulatioin Object<a class="headerlink" href="#create-simulatioin-object" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">executable</span> <span class="o">=</span> <span class="s2">&quot;/usr/bin/summa.exe&quot;</span>
+<span class="n">file_manager</span> <span class="o">=</span> <span class="s1">&#39;SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">executable</span><span class="p">,</span> <span class="n">file_manager</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+&lt;ipython-input-2-61930731a931&gt; in &lt;module&gt;
+      2 file_manager = &#39;SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;
+      3 
+----&gt; 4 s = ps.Simulation(executable, file_manager)
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/simulation.py in __init__(self, executable, filemanager, initialize, config_dir)
+     61         self.status = &#39;Uninitialized&#39;
+     62         if initialize:
+---&gt; 63             self.initialize()
+     64 
+     65     def initialize(self):
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/simulation.py in initialize(self)
+     71         ``reset`` method.
+     72         &quot;&quot;&quot;
+---&gt; 73         self.manager = FileManager(
+     74             self.manager_path.parent, self.manager_path.name)
+     75         self.status = &#39;Initialized&#39;
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/file_manager.py in __init__(self, path, name)
+     42 
+     43     def __init__(self, path, name):
+---&gt; 44         super().__init__(FileManagerOption, path, name)
+     45         assert self.get_value(&#39;controlVersion&#39;) == &#39;SUMMA_FILE_MANAGER_V3.0.0&#39;
+     46 
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/option.py in __init__(self, optiontype, dir, name)
+    119         self.header = []
+    120         self.options = []
+--&gt; 121         self.read(os.path.abspath(self.original_path / self.file_name))
+    122 
+    123     def set_option(self):
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/option.py in read(self, path)
+    141     def read(self, path):
+    142         &quot;&quot;&quot;Read the configuration and populate the options&quot;&quot;&quot;
+--&gt; 143         with open(path, &#39;r&#39;) as f:
+    144             self.original_contents = f.readlines()
+    145         for line in self.original_contents:
+
+FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/choi/project/pysumma-tutorial/docs/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="explore-decision-file">
+<h2>3. Explore decision file<a class="headerlink" href="#explore-decision-file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="show-decision-file-from-decisions-json-in-meta-folder-review-every-available-options">
+<h3>3.1 Show decision file from <code class="docutils literal notranslate"><span class="pre">decisions.json</span></code> in meta folder (review every available options)<a class="headerlink" href="#show-decision-file-from-decisions-json-in-meta-folder-review-every-available-options" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span><span class="o">.</span><span class="n">decisions</span><span class="o">.</span><span class="n">DECISION_META</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;soilCatTbl&#39;: {&#39;options&#39;: [&#39;STAS&#39;, &#39;STAS-RUC&#39;, &#39;ROSETTA&#39;],
+  &#39;description&#39;: &#39;soil-category dataset&#39;},
+ &#39;vegeParTbl&#39;: {&#39;options&#39;: [&#39;USGS&#39;, &#39;MODIFIED_IGBP_MODIS_NOAH&#39;],
+  &#39;description&#39;: &#39;vegetation-category dataset&#39;},
+ &#39;soilStress&#39;: {&#39;options&#39;: [&#39;NoahType&#39;, &#39;CLM_Type&#39;, &#39;SiB_Type&#39;],
+  &#39;description&#39;: &#39;choice of function for the soil moisture control on stomatal resistance&#39;},
+ &#39;stomResist&#39;: {&#39;options&#39;: [&#39;BallBerry&#39;,
+   &#39;Jarvis&#39;,
+   &#39;simpleResistance&#39;,
+   &#39;BallBerryFlex&#39;,
+   &#39;BallBerryTest&#39;],
+  &#39;description&#39;: &#39;choice of function for stomatal resistance&#39;},
+ &#39;bbTempFunc&#39;: {&#39;options&#39;: [&#39;q10Func&#39;, &#39;Arrhenius&#39;],
+  &#39;description&#39;: &#39;Ball-Berry: leaf temperature controls on photosynthesis + stomatal resistance&#39;},
+ &#39;bbHumdFunc&#39;: {&#39;options&#39;: [&#39;humidLeafSurface&#39;, &#39;scaledHyperbolic&#39;],
+  &#39;description&#39;: &#39;Ball-Berry: humidity controls on stomatal resistance&#39;},
+ &#39;bbElecFunc&#39;: {&#39;options&#39;: [&#39;linear&#39;, &#39;linearJmax&#39;, &#39;quadraticJmax&#39;],
+  &#39;description&#39;: &#39;Ball-Berry: dependence of photosynthesis on PAR&#39;},
+ &#39;bbCO2point&#39;: {&#39;options&#39;: [&#39;origBWB&#39;, &#39;Leuning&#39;],
+  &#39;description&#39;: &#39;Ball-Berry: use of CO2 compensation point to calculate stomatal resistance&#39;},
+ &#39;bbNumerics&#39;: {&#39;options&#39;: [&#39;NoahMPsolution&#39;, &#39;newtonRaphson&#39;],
+  &#39;description&#39;: &#39;Ball-Berry: iterative numerical solution method&#39;},
+ &#39;bbAssimFnc&#39;: {&#39;options&#39;: [&#39;colimitation&#39;, &#39;minFunc&#39;],
+  &#39;description&#39;: &#39;Ball-Berry: controls on carbon assimilation&#39;},
+ &#39;bbCanIntg8&#39;: {&#39;options&#39;: [&#39;constantScaling&#39;, &#39;laiScaling&#39;],
+  &#39;description&#39;: &#39;Ball-Berry: scaling of photosynthesis from the leaf to the canopy&#39;},
+ &#39;num_method&#39;: {&#39;options&#39;: [&#39;itertive&#39;, &#39;non_iter&#39;, &#39;itersurf&#39;],
+  &#39;description&#39;: &#39;choice of numerical method&#39;},
+ &#39;fDerivMeth&#39;: {&#39;options&#39;: [&#39;numericl&#39;, &#39;analytic&#39;],
+  &#39;description&#39;: &#39;choice of method to calculate flux derivatives&#39;},
+ &#39;LAI_method&#39;: {&#39;options&#39;: [&#39;monTable&#39;, &#39;specified&#39;],
+  &#39;description&#39;: &#39;choice of method to determine LAI and SAI&#39;},
+ &#39;cIntercept&#39;: {&#39;options&#39;: [&#39;sparseCanopy&#39;, &#39;storageFunc&#39;, &#39;notPopulatedYet&#39;],
+  &#39;description&#39;: &#39;choice of parameterization for canopy interception&#39;},
+ &#39;f_Richards&#39;: {&#39;options&#39;: [&#39;moisture&#39;, &#39;mixdform&#39;],
+  &#39;description&#39;: &#39;form of Richards equation&#39;},
+ &#39;groundwatr&#39;: {&#39;options&#39;: [&#39;qTopmodl&#39;, &#39;bigBuckt&#39;, &#39;noXplict&#39;],
+  &#39;description&#39;: &#39;choice of groundwater parameterization&#39;},
+ &#39;hc_profile&#39;: {&#39;options&#39;: [&#39;constant&#39;, &#39;pow_prof&#39;],
+  &#39;description&#39;: &#39;choice of hydraulic conductivity profile&#39;},
+ &#39;bcUpprTdyn&#39;: {&#39;options&#39;: [&#39;presTemp&#39;, &#39;nrg_flux&#39;, &#39;zeroFlux&#39;],
+  &#39;description&#39;: &#39;type of upper boundary condition for thermodynamics&#39;},
+ &#39;bcLowrTdyn&#39;: {&#39;options&#39;: [&#39;presTemp&#39;, &#39;zeroFlux&#39;],
+  &#39;description&#39;: &#39;type of lower boundary condition for thermodynamics&#39;},
+ &#39;bcUpprSoiH&#39;: {&#39;options&#39;: [&#39;presHead&#39;, &#39;liq_flux&#39;],
+  &#39;description&#39;: &#39;type of upper boundary condition for soil hydrology&#39;},
+ &#39;bcLowrSoiH&#39;: {&#39;options&#39;: [&#39;presHead&#39;, &#39;bottmPsi&#39;, &#39;drainage&#39;, &#39;zeroFlux&#39;],
+  &#39;description&#39;: &#39;type of lower boundary condition for soil hydrology&#39;},
+ &#39;veg_traits&#39;: {&#39;options&#39;: [&#39;Raupach_BLM1994&#39;, &#39;CM_QJRMS1988&#39;, &#39;vegTypeTable&#39;],
+  &#39;description&#39;: &#39;choice of parameterization for vegetation roughness length and displacement height&#39;},
+ &#39;rootProfil&#39;: {&#39;options&#39;: [&#39;powerLaw&#39;, &#39;doubleExp&#39;],
+  &#39;description&#39;: &#39;choice of parameterization for the rooting profile&#39;},
+ &#39;canopyEmis&#39;: {&#39;options&#39;: [&#39;simplExp&#39;, &#39;difTrans&#39;],
+  &#39;description&#39;: &#39;choice of parameterization for canopy emissivity&#39;},
+ &#39;snowIncept&#39;: {&#39;options&#39;: [&#39;stickySnow&#39;, &#39;lightSnow&#39;],
+  &#39;description&#39;: &#39;choice of parameterization for snow interception&#39;},
+ &#39;snowUnload&#39;: {&#39;options&#39;: [&#39;meltDripUnload&#39;, &#39;windUnload&#39;],
+  &#39;description&#39;: &#39;choice of parameterization for snow unloading from canopy&#39;},
+ &#39;windPrfile&#39;: {&#39;options&#39;: [&#39;exponential&#39;, &#39;logBelowCanopy&#39;],
+  &#39;description&#39;: &#39;choice of canopy wind profile&#39;},
+ &#39;astability&#39;: {&#39;options&#39;: [&#39;standard&#39;, &#39;louisinv&#39;, &#39;mahrtexp&#39;],
+  &#39;description&#39;: &#39;choice of stability function&#39;},
+ &#39;compaction&#39;: {&#39;options&#39;: [&#39;consettl&#39;, &#39;anderson&#39;],
+  &#39;description&#39;: &#39;choice of compaction routine&#39;},
+ &#39;snowLayers&#39;: {&#39;options&#39;: [&#39;jrdn1991&#39;, &#39;CLM_2010&#39;],
+  &#39;description&#39;: &#39;choice of method to combine and sub-divide snow layers&#39;},
+ &#39;thCondSnow&#39;: {&#39;options&#39;: [&#39;tyen1965&#39;, &#39;melr1977&#39;, &#39;jrdn1991&#39;, &#39;smnv2000&#39;],
+  &#39;description&#39;: &#39;choice of thermal conductivity representation for snow&#39;},
+ &#39;thCondSoil&#39;: {&#39;options&#39;: [&#39;funcSoilWet&#39;, &#39;mixConstit&#39;, &#39;hanssonVZJ&#39;],
+  &#39;description&#39;: &#39;choice of thermal conductivity representation for soil&#39;},
+ &#39;canopySrad&#39;: {&#39;options&#39;: [&#39;noah_mp&#39;,
+   &#39;CLM_2stream&#39;,
+   &#39;UEB_2stream&#39;,
+   &#39;NL_scatter&#39;,
+   &#39;BeersLaw&#39;],
+  &#39;description&#39;: &#39;choice of method for canopy shortwave radiation&#39;},
+ &#39;alb_method&#39;: {&#39;options&#39;: [&#39;conDecay&#39;, &#39;varDecay&#39;],
+  &#39;description&#39;: &#39;choice of albedo representation&#39;},
+ &#39;spatial_gw&#39;: {&#39;options&#39;: [&#39;localColumn&#39;, &#39;singleBasin&#39;],
+  &#39;description&#39;: &#39;choice of method for spatial representation of groundwater&#39;},
+ &#39;subRouting&#39;: {&#39;options&#39;: [&#39;timeDlay&#39;, &#39;qInstant&#39;],
+  &#39;description&#39;: &#39;choice of method for sub-grid routing&#39;},
+ &#39;snowDenNew&#39;: {&#39;options&#39;: [&#39;hedAndPom&#39;, &#39;anderson&#39;, &#39;pahaut_76&#39;, &#39;constDens&#39;],
+  &#39;description&#39;: &#39;choice of method for new snow density&#39;}}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-decision-file-using-orginal-contents-attribute">
+<h3>3.2 Show decision file using <code class="docutils literal notranslate"><span class="pre">orginal_contents</span></code> attribute<a class="headerlink" href="#show-decision-file-using-orginal-contents-attribute" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="o">.</span><span class="n">original_contents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;soilCatTbl    ROSETTA              ! soil-category dataset\n&#39;,
+ &#39;vegeParTbl    USGS                 ! vegetation-category dataset\n&#39;,
+ &#39;soilStress    NoahType             ! choice of function for the soil moisture control on stomatal resistance\n&#39;,
+ &#39;stomResist    simpleResistance     ! choice of function for stomatal resistance\n&#39;,
+ &#39;num_method    itertive             ! choice of numerical method\n&#39;,
+ &#39;fDerivMeth    analytic             ! choice of method to calculate flux derivatives\n&#39;,
+ &#39;LAI_method    specified            ! choice of method to determine LAI and SAI\n&#39;,
+ &#39;f_Richards    mixdform             ! form of Richards equation\n&#39;,
+ &#39;groundwatr    noXplict             ! choice of groundwater parameterization\n&#39;,
+ &#39;hc_profile    constant             ! choice of hydraulic conductivity profile\n&#39;,
+ &#39;bcUpprTdyn    nrg_flux             ! type of upper boundary condition for thermodynamics\n&#39;,
+ &#39;bcLowrTdyn    zeroFlux             ! type of lower boundary condition for thermodynamics\n&#39;,
+ &#39;bcUpprSoiH    liq_flux             ! type of upper boundary condition for soil hydrology\n&#39;,
+ &#39;bcLowrSoiH    drainage             ! type of lower boundary condition for soil hydrology\n&#39;,
+ &#39;veg_traits    CM_QJRMS1988         ! choice of parameterization for vegetation roughness length and displacement height\n&#39;,
+ &#39;canopyEmis    difTrans             ! choice of parameterization for canopy emissivity\n&#39;,
+ &#39;snowIncept    lightSnow            ! choice of parameterization for snow interception\n&#39;,
+ &#39;windPrfile    logBelowCanopy       ! choice of canopy wind profile\n&#39;,
+ &#39;astability    louisinv             ! choice of stability function\n&#39;,
+ &#39;canopySrad    BeersLaw             ! choice of method for canopy shortwave radiation\n&#39;,
+ &#39;alb_method    varDecay             ! choice of albedo representation\n&#39;,
+ &#39;compaction    anderson             ! choice of compaction routine\n&#39;,
+ &#39;snowLayers    CLM_2010             ! choice of method to combine and sub-divide snow layers\n&#39;,
+ &#39;thCondSnow    jrdn1991             ! choice of thermal conductivity representation for snow\n&#39;,
+ &#39;thCondSoil    mixConstit           ! choice of thermal conductivity representation for soil\n&#39;,
+ &#39;spatial_gw    localColumn          ! choice of method for spatial representation of groundwater\n&#39;,
+ &#39;subRouting    timeDlay             ! choice of method for sub-grid routing\n&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-decision-file-using-print-command">
+<h3>3.3 Show decision file using <code class="docutils literal notranslate"><span class="pre">print</span></code> command<a class="headerlink" href="#show-decision-file-using-print-command" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>soilCatTbl    ROSETTA              ! soil-category dataset
+vegeParTbl    USGS                 ! vegetation-category dataset
+soilStress    NoahType             ! choice of function for the soil moisture control on stomatal resistance
+stomResist    simpleResistance     ! choice of function for stomatal resistance
+num_method    itertive             ! choice of numerical method
+fDerivMeth    analytic             ! choice of method to calculate flux derivatives
+LAI_method    specified            ! choice of method to determine LAI and SAI
+f_Richards    mixdform             ! form of Richards equation
+groundwatr    noXplict             ! choice of groundwater parameterization
+hc_profile    constant             ! choice of hydraulic conductivity profile
+bcUpprTdyn    nrg_flux             ! type of upper boundary condition for thermodynamics
+bcLowrTdyn    zeroFlux             ! type of lower boundary condition for thermodynamics
+bcUpprSoiH    liq_flux             ! type of upper boundary condition for soil hydrology
+bcLowrSoiH    drainage             ! type of lower boundary condition for soil hydrology
+veg_traits    CM_QJRMS1988         ! choice of parameterization for vegetation roughness length and displacement height
+canopyEmis    difTrans             ! choice of parameterization for canopy emissivity
+snowIncept    lightSnow            ! choice of parameterization for snow interception
+windPrfile    logBelowCanopy       ! choice of canopy wind profile
+astability    louisinv             ! choice of stability function
+canopySrad    BeersLaw             ! choice of method for canopy shortwave radiation
+alb_method    varDecay             ! choice of albedo representation
+compaction    anderson             ! choice of compaction routine
+snowLayers    CLM_2010             ! choice of method to combine and sub-divide snow layers
+thCondSnow    jrdn1991             ! choice of thermal conductivity representation for snow
+thCondSoil    mixConstit           ! choice of thermal conductivity representation for soil
+spatial_gw    localColumn          ! choice of method for spatial representation of groundwater
+subRouting    timeDlay             ! choice of method for sub-grid routing
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-value-of-each-line-in-decision-file">
+<h3>3.4 Get value of each line in decision file<a class="headerlink" href="#get-value-of-each-line-in-decision-file" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the current name of `stomResist`</span>
+<span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">[</span><span class="s1">&#39;stomResist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;stomResist&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the current available options of `stomResist`</span>
+<span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">[</span><span class="s1">&#39;stomResist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">available_options</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;BallBerry&#39;, &#39;Jarvis&#39;, &#39;simpleResistance&#39;, &#39;BallBerryFlex&#39;, &#39;BallBerryTest&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the current value of `stomResist`</span>
+<span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">[</span><span class="s1">&#39;stomResist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;simpleResistance&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the current description of `stomResist`</span>
+<span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">[</span><span class="s1">&#39;stomResist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">description</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;choice of function for stomatal resistance&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="change-the-value-of-each-line-in-decision-file">
+<h3>3.5 Change the value of each line in decision file<a class="headerlink" href="#change-the-value-of-each-line-in-decision-file" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set different value of `stomResist` </span>
+<span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">[</span><span class="s1">&#39;stomResist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Jarvis&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set different value of `stomResist`</span>
+<span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="p">[</span><span class="s1">&#39;stomResist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Jarvis&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># overwirte the current value of `stomResist` in decision file</span>
+<span class="n">s</span><span class="o">.</span><span class="n">decisions</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">decisions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>soilCatTbl    ROSETTA              ! soil-category dataset
+vegeParTbl    USGS                 ! vegetation-category dataset
+soilStress    NoahType             ! choice of function for the soil moisture control on stomatal resistance
+stomResist    Jarvis               ! choice of function for stomatal resistance
+num_method    itertive             ! choice of numerical method
+fDerivMeth    analytic             ! choice of method to calculate flux derivatives
+LAI_method    specified            ! choice of method to determine LAI and SAI
+f_Richards    mixdform             ! form of Richards equation
+groundwatr    noXplict             ! choice of groundwater parameterization
+hc_profile    constant             ! choice of hydraulic conductivity profile
+bcUpprTdyn    nrg_flux             ! type of upper boundary condition for thermodynamics
+bcLowrTdyn    zeroFlux             ! type of lower boundary condition for thermodynamics
+bcUpprSoiH    liq_flux             ! type of upper boundary condition for soil hydrology
+bcLowrSoiH    drainage             ! type of lower boundary condition for soil hydrology
+veg_traits    CM_QJRMS1988         ! choice of parameterization for vegetation roughness length and displacement height
+canopyEmis    difTrans             ! choice of parameterization for canopy emissivity
+snowIncept    lightSnow            ! choice of parameterization for snow interception
+windPrfile    logBelowCanopy       ! choice of canopy wind profile
+astability    louisinv             ! choice of stability function
+canopySrad    BeersLaw             ! choice of method for canopy shortwave radiation
+alb_method    varDecay             ! choice of albedo representation
+compaction    anderson             ! choice of compaction routine
+snowLayers    CLM_2010             ! choice of method to combine and sub-divide snow layers
+thCondSnow    jrdn1991             ! choice of thermal conductivity representation for snow
+thCondSoil    mixConstit           ! choice of thermal conductivity representation for soil
+spatial_gw    localColumn          ! choice of method for spatial representation of groundwater
+subRouting    timeDlay             ! choice of method for sub-grid routing
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "DavidChoi76/pysumma-tutorial",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pysumma"
+        },
+        kernelOptions: {
+            kernelName: "pysumma",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'pysumma'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="A.%20Explore%20file%20manger%20of%20SUMMA%203.0.3.html" title="previous page">A. Explore file manger of SUMMA 3.0.0</a>
+    <a class='right-next' id="next-link" href="C.%20Explore%20forcing%20data%20of%20SUMMA%203.0.0.html" title="next page">C. Explore forcing data of SUMMA 3.0.0</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By YoungDon Choi, Andrew Bennett<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

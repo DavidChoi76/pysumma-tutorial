@@ -1,0 +1,1369 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C. Explore forcing data of SUMMA 3.0.0 &#8212; pySUMMA Tutorial Jupyter Notebooks</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0" href="D.%20Explore%20local%20attributes%2C%20local%20parameters%20%28global%20hru%29%20and%20basin%20parameters%20%28global%20gru%29%20of%20SUMMA%203.0.html" />
+    <link rel="prev" title="B. Explore decision file of SUMMA 3.0.0" href="B.%20Explore%20decision%20file%20of%20SUMMA%203.0.0.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">pySUMMA Tutorial Jupyter Notebooks</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to pySUMMA Tutorial Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks.html">
+     Content with notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="A.%20Explore%20file%20manger%20of%20SUMMA%203.0.3.html">
+     A. Explore file manger of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="B.%20Explore%20decision%20file%20of%20SUMMA%203.0.0.html">
+     B. Explore decision file of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     C. Explore forcing data of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="D.%20Explore%20local%20attributes%2C%20local%20parameters%20%28global%20hru%29%20and%20basin%20parameters%20%28global%20gru%29%20of%20SUMMA%203.0.html">
+     D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="E.%20Explore%20Trial%20parameters%2C%20Output%20control%20and%20Noah-MP%20tables%20of%20SUMMA%203.0.html">
+     E. Explore Trial parameters, Output control and Noah-MP tables of SUMMA 3.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="F.%20Explore%20Initial%20conditions%20restart%20or%20state%20file.html">
+     F. Explore Initial conditions restart or state file of SUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html">
+     G-1. SUMMA simulation using Output Control
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#explore-forcing-file-list">
+     3. Explore Forcing file list
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-1.%20SUMMA%20simulation%20using%20Output%20Control.html#explore-output-control-text-file">
+     4. Explore Output control text file
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html">
+     G-2. Ensemble simulation using different parameterizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-2.%20Ensemble%20simulation%20using%20different%20parameterizations%20%28decisions%29.html#ensemble-simulations-using-different-parameterizations-decision-files">
+     3. Ensemble Simulations using Different Parameterizations (decision files)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html">
+     G-1. Ensemble simulation using different values of a Local Parameters (Global HRU)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-3.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Parameters%20%28Global%20HRU%29.html#ensemble-simulations-using-different-local-parameters-global-hru">
+     3. Ensemble Simulations using Different Local Parameters (Global HRU)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html">
+     G-4. Ensemble simulation using different values of a Local Attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-4.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Local%20Attributes.html#ensemble-simulations-using-different-local-attributes">
+     3. Ensemble Simulations using Different Local Attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html">
+     G-5. Ensemble simulation using different values of a Trial Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-5.%20Ensemble%20simulation%20using%20different%20values%20of%20a%20Trial%20Parameters.html#ensemble-simulations-using-different-trial-parameters">
+     3. Ensemble Simulations using Different Trial Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html">
+     G-6. Ensemble simulation using different file manager files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-6.%20Ensemble%20simulation%20using%20different%20file%20manager%20files.html#ensemble-simulations-using-different-file-manager-files">
+     3. Ensemble Simulations using Different file manager files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html">
+     G-7. Ensemble simulation using different decisions and parameter trials setting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html#import-pysumma-3-0-0">
+     1. Import pySUMMA 3.0.0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html#create-simulatioin-object">
+     2. Create Simulatioin Object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="G-7.%20Ensemble%20simulation%20using%20different%20decisions%20and%20parameter%20trials%20setting.html#ensemble-simulations-using-different-decisions-and-parameter-trials-setting">
+     3. Ensemble Simulations using different decisions and parameter trials setting
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/C. Explore forcing data of SUMMA 3.0.0.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DavidChoi76/pysumma-tutorial"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DavidChoi76/pysumma-tutorial/issues/new?title=Issue%20on%20page%20%2FC. Explore forcing data of SUMMA 3.0.0.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DavidChoi76/pysumma-tutorial/master?urlpath=tree/docs/C. Explore forcing data of SUMMA 3.0.0.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-pysumma-3-0-0">
+   1. Import pySUMMA 3.0.0
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-simulatioin-object">
+   2. Create Simulatioin Object
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explore-forcing-file-list-file">
+   3. Explore forcing file list file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-forcing-file-list-using-forcing-paths-attributte">
+     3.1 Show forcing file list using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       forcing_paths
+      </span>
+     </code>
+     attributte
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-forcing-file-list-using-original-contents-attributte">
+     3.2 Show forcing file list using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       original_contents
+      </span>
+     </code>
+     attributte
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-forcing-file-list-using-file-name-attributte">
+     3.3 Show forcing file list using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       file_name
+      </span>
+     </code>
+     attributte
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-forcing-file-using-open-forcing-data-attributte">
+     3.4 Open forcing file using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       open_forcing_data
+      </span>
+     </code>
+     attributte
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-forcing-file-name-to-cues-2011-2017-nc-in-forcing-file-list-text-file">
+     3.5 Change forcing file name to “cues_2011-2017.nc” in forcing file list text file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#return-previous-forcing-file-name-back-in-forcing-file-list-text-file">
+     3.6 Return previous forcing file name back in forcing file list text file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-forcing-data-and-visualization">
+     3.7 Get forcing data and visualization
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="c-explore-forcing-data-of-summa-3-0-0">
+<h1>C. Explore forcing data of SUMMA 3.0.0<a class="headerlink" href="#c-explore-forcing-data-of-summa-3-0-0" title="Permalink to this headline">¶</a></h1>
+<p>The list of forcing files file is an <strong><code class="docutils literal notranslate"><span class="pre">ASCII</span> <span class="pre">file</span></code></strong> that specifies a list of meteorological forcing files that are read by SUMMA and that provide the time-varying atmospheric boundary conditions. The list of forcing files file contains one field per line, which specifies the name of a forcing file in single quotes. The file is parsed by <strong><code class="docutils literal notranslate"><span class="pre">build/source/engine/ffile_info.f90:ffile_info()</span></code></strong>. Each of the forcing files must contain all the GRUs/HRUs that are part of the simulation, but can contain a subset of the modeling period. For example, the forcing files can be organized by year or month to stop file sizes for large domains from becoming too unwieldy. In the forcing files, these meteorological forcing files would be listed in order, with the earliest file listed first.</p>
+<p>The meteorological forcing files are <strong>NetCDF</strong> files that specify the time-varying atmospheric boundary conditions for SUMMA. The files are parsed by <strong><code class="docutils literal notranslate"><span class="pre">build/source/engine/ffile_info.f90:ffile_info()</span></code></strong> to perform a series of file checks (number of HRUs, presence of all required variables) and by <strong><code class="docutils literal notranslate"><span class="pre">build/source/engine/read_force.f90:read_force()</span></code></strong> to get the meteorological information for the next time step.</p>
+<p>Each forcing file must contain a <strong><code class="docutils literal notranslate"><span class="pre">time</span></code></strong> and a <strong><code class="docutils literal notranslate"><span class="pre">hru</span></code></strong> dimension. In addition, the file must contain the following variables at a minimum (it is OK if the file contains additional variables that will not be read, for example, it may be useful include latitude and longitude for each HRU to facilitate visualization of the forcing data)</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Variable</p></th>
+<th class="text-align:left head"><p>dimension</p></th>
+<th class="text-align:left head"><p>type</p></th>
+<th class="text-align:left head"><p>units</p></th>
+<th class="text-align:left head"><p>long name</p></th>
+<th class="text-align:left head"><p>notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>data_step</p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>seconds</p></td>
+<td class="text-align:left"><p>Length of time step</p></td>
+<td class="text-align:left"><p>Single value that must be the same for all forcing files in the same list of forcing files file</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>hruId</p></td>
+<td class="text-align:left"><p>hru</p></td>
+<td class="text-align:left"><p>int or int64</p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>Index of hydrological response unit (HRU)</p></td>
+<td class="text-align:left"><p>Unique numeric ID for each HRU</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>time</p></td>
+<td class="text-align:left"><p>time</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>see below</p></td>
+<td class="text-align:left"><p>time since time reference</p></td>
+<td class="text-align:left"><p>Time stamps are period-ending</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>pptrate</p></td>
+<td class="text-align:left"><p>time, hru</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>kg m-2 s-1</p></td>
+<td class="text-align:left"><p>Precipitation rate</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>SWRadAtm</p></td>
+<td class="text-align:left"><p>time, hru</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>W m-2</p></td>
+<td class="text-align:left"><p>Downward shortwave radiation at the upper boundary</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>LWRadAtm</p></td>
+<td class="text-align:left"><p>time, hru</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>W m-2</p></td>
+<td class="text-align:left"><p>Downward longwave radiation at the upper boundary</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>airtemp</p></td>
+<td class="text-align:left"><p>time, hru</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>K</p></td>
+<td class="text-align:left"><p>Air temperature at the measurement height</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>windspd</p></td>
+<td class="text-align:left"><p>time, hru</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>m s-1</p></td>
+<td class="text-align:left"><p>Wind speed at the measurement height</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>airpres</p></td>
+<td class="text-align:left"><p>time, hru</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>Pa</p></td>
+<td class="text-align:left"><p>Air pressure at the the measurement height</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>spechum</p></td>
+<td class="text-align:left"><p>time, hru</p></td>
+<td class="text-align:left"><p>double</p></td>
+<td class="text-align:left"><p>g g-1</p></td>
+<td class="text-align:left"><p>Specific humidity at the measurement height</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Notes about forcing file format:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Forcing</span> <span class="pre">timestep</span> <span class="pre">units</span></code></strong>: The user can specify the time units as <strong><code class="docutils literal notranslate"><span class="pre">&lt;units&gt;</span> <span class="pre">since</span> <span class="pre">&lt;reference</span> <span class="pre">time&gt;</span></code></strong>, where <strong><code class="docutils literal notranslate"><span class="pre">&lt;units&gt;</span></code></strong> is one of <strong><code class="docutils literal notranslate"><span class="pre">seconds</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">hours</span></code></strong>, or <strong><code class="docutils literal notranslate"><span class="pre">days</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">&lt;reference</span> <span class="pre">time&gt;</span></code></strong> is specified as <strong><code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">hh:mm</span></code></strong>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Forcing</span> <span class="pre">time</span> <span class="pre">stamp</span></code></strong>: SUMMA forcing time stamps are period-ending and the forcing information reflects average conditions over the time interval of length <strong><code class="docutils literal notranslate"><span class="pre">data_step</span></code></strong> preceding the time stamp.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Upper</span> <span class="pre">boundary</span></code></strong>: The upper boundary refers to the upper boundary of the SUMMA domain, so this would be at some height above the canopy or ground (in case there is no canopy).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Measurement</span> <span class="pre">height</span></code></strong>: The measurement height is the height (above bare ground) where the meteorological variables are specified. This value is specified as <strong><code class="docutils literal notranslate"><span class="pre">mHeight</span></code></strong> in the local attributes file.</p></li>
+</ul>
+<p>SUMMA uses adaptive time stepping to solve the model equations. Atmospheric conditions are kept constant during the adaptive sub-steps that occur during a meteorological forcing time step.</p>
+<div class="section" id="import-pysumma-3-0-0">
+<h2>1. Import pySUMMA 3.0.0<a class="headerlink" href="#import-pysumma-3-0-0" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pysumma</span> <span class="k">as</span> <span class="nn">ps</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-simulatioin-object">
+<h2>2. Create Simulatioin Object<a class="headerlink" href="#create-simulatioin-object" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">executable</span> <span class="o">=</span> <span class="s2">&quot;/usr/bin/summa.exe&quot;</span>
+<span class="n">file_manager</span> <span class="o">=</span> <span class="s1">&#39;SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">executable</span><span class="p">,</span> <span class="n">file_manager</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+&lt;ipython-input-2-61930731a931&gt; in &lt;module&gt;
+      2 file_manager = &#39;SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;
+      3 
+----&gt; 4 s = ps.Simulation(executable, file_manager)
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/simulation.py in __init__(self, executable, filemanager, initialize, config_dir)
+     61         self.status = &#39;Uninitialized&#39;
+     62         if initialize:
+---&gt; 63             self.initialize()
+     64 
+     65     def initialize(self):
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/simulation.py in initialize(self)
+     71         ``reset`` method.
+     72         &quot;&quot;&quot;
+---&gt; 73         self.manager = FileManager(
+     74             self.manager_path.parent, self.manager_path.name)
+     75         self.status = &#39;Initialized&#39;
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/file_manager.py in __init__(self, path, name)
+     42 
+     43     def __init__(self, path, name):
+---&gt; 44         super().__init__(FileManagerOption, path, name)
+     45         assert self.get_value(&#39;controlVersion&#39;) == &#39;SUMMA_FILE_MANAGER_V3.0.0&#39;
+     46 
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/option.py in __init__(self, optiontype, dir, name)
+    119         self.header = []
+    120         self.options = []
+--&gt; 121         self.read(os.path.abspath(self.original_path / self.file_name))
+    122 
+    123     def set_option(self):
+
+~/anaconda3/envs/pysumma/lib/python3.8/site-packages/pysumma/option.py in read(self, path)
+    141     def read(self, path):
+    142         &quot;&quot;&quot;Read the configuration and populate the options&quot;&quot;&quot;
+--&gt; 143         with open(path, &#39;r&#39;) as f:
+    144             self.original_contents = f.readlines()
+    145         for line in self.original_contents:
+
+FileNotFoundError: [Errno 2] No such file or directory: &#39;/home/choi/project/pysumma-tutorial/docs/SummaModel_ReynoldsAspenStand_StomatalResistance/settings/summa_fileManager_riparianAspenSimpleResistance.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="explore-forcing-file-list-file">
+<h2>3. Explore forcing file list file<a class="headerlink" href="#explore-forcing-file-list-file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="show-forcing-file-list-using-forcing-paths-attributte">
+<h3>3.1 Show forcing file list using <code class="docutils literal notranslate"><span class="pre">forcing_paths</span></code> attributte<a class="headerlink" href="#show-forcing-file-list-using-forcing-paths-attributte" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">forcing_paths</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/home/jovyan/work/SUMMA3_Manual/SummaModel_ReynoldsAspenStand_StomatalResistance/data/forcingData/forcing_above_aspen.nc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-forcing-file-list-using-original-contents-attributte">
+<h3>3.2 Show forcing file list using <code class="docutils literal notranslate"><span class="pre">original_contents</span></code> attributte<a class="headerlink" href="#show-forcing-file-list-using-original-contents-attributte" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">original_contents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;&#39;forcing_above_aspen.nc&#39;\n&quot;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-forcing-file-list-using-file-name-attributte">
+<h3>3.3 Show forcing file list using <code class="docutils literal notranslate"><span class="pre">file_name</span></code> attributte<a class="headerlink" href="#show-forcing-file-list-using-file-name-attributte" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">file_name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;summa_zForcingFileList_riparianAspen.txt&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="open-forcing-file-using-open-forcing-data-attributte">
+<h3>3.4 Open forcing file using <code class="docutils literal notranslate"><span class="pre">open_forcing_data</span></code> attributte<a class="headerlink" href="#open-forcing-file-using-open-forcing-data-attributte" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forcing</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">open_forcing_data</span><span class="p">()</span>
+<span class="n">forcing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;xarray.Dataset&gt;
+ Dimensions:    (hru: 1, time: 87672)
+ Coordinates:
+   * time       (time) datetime64[ns] 1998-10-01T00:59:59.999996640 ... 2008-1...
+ Dimensions without coordinates: hru
+ Data variables:
+     hruId      (hru) int32 ...
+     latitude   (hru) float64 ...
+     longitude  (hru) float64 ...
+     data_step  timedelta64[ns] ...
+     LWRadAtm   (time, hru) float64 ...
+     SWRadAtm   (time, hru) float64 ...
+     airpres    (time, hru) float64 ...
+     airtemp    (time, hru) float64 ...
+     pptrate    (time, hru) float64 ...
+     spechum    (time, hru) float64 ...
+     windspd    (time, hru) float64 ...
+ Attributes:
+     dataset_orig_path:  /d2/anewman/summa/summaTestCases/testCases_data/input...
+     history:            Tue Sep 27 21:53:08 2016: ncrename -d nHRU,hru ./inpu...
+     NCO:                &quot;4.6.0&quot;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="change-forcing-file-name-to-cues-2011-2017-nc-in-forcing-file-list-text-file">
+<h3>3.5 Change forcing file name to “cues_2011-2017.nc” in forcing file list text file<a class="headerlink" href="#change-forcing-file-name-to-cues-2011-2017-nc-in-forcing-file-list-text-file" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">original_path</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">file_name</span><span class="p">),</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">filedata</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">filedata</span> <span class="o">=</span> <span class="n">filedata</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">forcing_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;cues_2011-2017.nc&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">original_path</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">file_name</span><span class="p">),</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filedata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the changed forcing file name</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">executable</span><span class="p">,</span> <span class="n">file_manager</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">original_contents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;&#39;cues_2011-2017.nc&#39;\n&quot;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="return-previous-forcing-file-name-back-in-forcing-file-list-text-file">
+<h3>3.6 Return previous forcing file name back in forcing file list text file<a class="headerlink" href="#return-previous-forcing-file-name-back-in-forcing-file-list-text-file" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">original_path</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">file_name</span><span class="p">),</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">filedata</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">filedata</span> <span class="o">=</span> <span class="n">filedata</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">forcing_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;forcing_above_aspen.nc&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">original_path</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">file_name</span><span class="p">),</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filedata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the changed forcing file name</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="n">Simulation</span><span class="p">(</span><span class="n">executable</span><span class="p">,</span> <span class="n">file_manager</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">original_contents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&quot;&#39;forcing_above_aspen.nc&#39;\n&quot;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-forcing-data-and-visualization">
+<h3>3.7 Get forcing data and visualization<a class="headerlink" href="#get-forcing-data-and-visualization" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysumma.plotting.plotting</span> <span class="kn">import</span> <span class="n">Plotting</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a pySUMMA plotting object using the SUMMA output NetCDF file </span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">Plotting</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">force_file_list</span><span class="o">.</span><span class="n">forcing_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show forcing Dimensions, Coordinates and Data variables in netCDF</span>
+<span class="n">P</span><span class="o">.</span><span class="n">open_netcdf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt, dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:    (hru: 1, time: 87672)
+Coordinates:
+  * time       (time) datetime64[ns] 1998-10-01T00:59:59.999996640 ... 2008-1...
+Dimensions without coordinates: hru
+Data variables:
+    hruId      (hru) int32 1001
+    latitude   (hru) float64 43.2
+    longitude  (hru) float64 243.2
+    data_step  timedelta64[ns] 01:00:00
+    LWRadAtm   (time, hru) float64 323.0 320.0 313.0 309.0 ... 292.0 296.0 293.0
+    SWRadAtm   (time, hru) float64 0.0 0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0 0.0
+    airpres    (time, hru) float64 7.935e+04 7.935e+04 ... 7.935e+04 7.935e+04
+    airtemp    (time, hru) float64 283.3 282.8 281.5 280.9 ... 287.4 288.0 287.2
+    pptrate    (time, hru) float64 0.0 0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0 0.0
+    spechum    (time, hru) float64 0.005053 0.00498 ... 0.00509 0.004873
+    windspd    (time, hru) float64 2.3 2.5 2.4 2.3 2.6 ... 2.7 5.8 4.4 2.3 2.5
+Attributes:
+    dataset_orig_path:  /d2/anewman/summa/summaTestCases/testCases_data/input...
+    history:            Tue Sep 27 21:53:08 2016: ncrename -d nHRU,hru ./inpu...
+    NCO:                &quot;4.6.0&quot;</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f0cf3971-e46a-4c6d-bd3e-a97002736b27' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f0cf3971-e46a-4c6d-bd3e-a97002736b27' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>hru</span>: 1</li><li><span class='xr-has-index'>time</span>: 87672</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-914e0adc-5a3d-43ba-a8f4-4f0d63deafde' class='xr-section-summary-in' type='checkbox'  checked><label for='section-914e0adc-5a3d-43ba-a8f4-4f0d63deafde' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1998-10-01T00:59:59.999996640 .....</div><input id='attrs-53d6bc42-ae65-4ef1-9b4f-1219e870df87' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-53d6bc42-ae65-4ef1-9b4f-1219e870df87' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-54222c31-507c-43fd-a937-447b68fbbdc4' class='xr-var-data-in' type='checkbox'><label for='data-54222c31-507c-43fd-a937-447b68fbbdc4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Observation time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1998-10-01T00:59:59.999996640&#x27;, &#x27;1998-10-01T02:00:00.000003360&#x27;,
+       &#x27;1998-10-01T03:00:00.000000000&#x27;, ..., &#x27;2008-09-30T21:59:59.999996672&#x27;,
+       &#x27;2008-09-30T23:00:00.000003328&#x27;, &#x27;2008-10-01T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-80cd6b6c-4a77-4a30-a771-b4c05a8e82ea' class='xr-section-summary-in' type='checkbox'  checked><label for='section-80cd6b6c-4a77-4a30-a771-b4c05a8e82ea' class='xr-section-summary' >Data variables: <span>(11)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>hruId</span></div><div class='xr-var-dims'>(hru)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-b661571e-1626-407e-8fa8-e0edbebb11ec' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b661571e-1626-407e-8fa8-e0edbebb11ec' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-12aae29a-9b3b-4322-ac51-b7be717e61c4' class='xr-var-data-in' type='checkbox'><label for='data-12aae29a-9b3b-4322-ac51-b7be717e61c4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1001], dtype=int32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-bb80640e-c68e-4e0e-bef8-88a19396023e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-bb80640e-c68e-4e0e-bef8-88a19396023e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b2d5ee18-6205-45b6-a066-bd886bb2d37f' class='xr-var-data-in' type='checkbox'><label for='data-b2d5ee18-6205-45b6-a066-bd886bb2d37f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.2])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-beb930aa-6876-46ba-a1d6-aedf77df9455' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-beb930aa-6876-46ba-a1d6-aedf77df9455' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e5089235-5ed0-470a-8275-45fdf6e64e98' class='xr-var-data-in' type='checkbox'><label for='data-e5089235-5ed0-470a-8275-45fdf6e64e98' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([243.2])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>data_step</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>timedelta64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-3062ca4c-35a1-411e-8a63-bcf4ef11dc84' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3062ca4c-35a1-411e-8a63-bcf4ef11dc84' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a46e581a-4a95-4ddb-985f-d8910f773126' class='xr-var-data-in' type='checkbox'><label for='data-a46e581a-4a95-4ddb-985f-d8910f773126' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>data step length in seconds</dd></dl></div><div class='xr-var-data'><pre>array(3600000000000, dtype=&#x27;timedelta64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>LWRadAtm</span></div><div class='xr-var-dims'>(time, hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d7e7156c-37b0-40cc-a088-7b70a2dea5a9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d7e7156c-37b0-40cc-a088-7b70a2dea5a9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c330633b-e879-4fe3-b5d4-1c1326423114' class='xr-var-data-in' type='checkbox'><label for='data-c330633b-e879-4fe3-b5d4-1c1326423114' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>long_name :</span></dt><dd>downward longwave radiation at the upper boundary</dd><dt><span>v_type :</span></dt><dd>scalarv</dd></dl></div><div class='xr-var-data'><pre>array([[323.],
+       [320.],
+       [313.],
+       ...,
+       [292.],
+       [296.],
+       [293.]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SWRadAtm</span></div><div class='xr-var-dims'>(time, hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-cf320b62-6094-420d-8b12-0578c8811c75' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-cf320b62-6094-420d-8b12-0578c8811c75' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c43b5db5-153b-4529-be67-035baecfbb16' class='xr-var-data-in' type='checkbox'><label for='data-c43b5db5-153b-4529-be67-035baecfbb16' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>long_name :</span></dt><dd>downward shortwave radiation at the upper boundary</dd><dt><span>v_type :</span></dt><dd>scalarv</dd></dl></div><div class='xr-var-data'><pre>array([[0.],
+       [0.],
+       [0.],
+       ...,
+       [0.],
+       [0.],
+       [0.]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>airpres</span></div><div class='xr-var-dims'>(time, hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-fd00ed9b-62ca-402e-b177-9b15d1bbb605' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-fd00ed9b-62ca-402e-b177-9b15d1bbb605' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4ebc7941-62b7-4936-83a2-2ddc67798c3a' class='xr-var-data-in' type='checkbox'><label for='data-4ebc7941-62b7-4936-83a2-2ddc67798c3a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>Pa</dd><dt><span>long_name :</span></dt><dd>air pressure at the measurement height</dd><dt><span>v_type :</span></dt><dd>scalarv</dd></dl></div><div class='xr-var-data'><pre>array([[79345.969],
+       [79345.969],
+       [79345.969],
+       ...,
+       [79345.969],
+       [79345.969],
+       [79345.969]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>airtemp</span></div><div class='xr-var-dims'>(time, hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-05dde585-39e8-4bd1-9e9e-8108e6f9be07' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-05dde585-39e8-4bd1-9e9e-8108e6f9be07' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d2173ba6-3c35-4f2c-85e1-32c19c6aac83' class='xr-var-data-in' type='checkbox'><label for='data-d2173ba6-3c35-4f2c-85e1-32c19c6aac83' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>air temperature at the measurement height</dd><dt><span>v_type :</span></dt><dd>scalarv</dd></dl></div><div class='xr-var-data'><pre>array([[283.26],
+       [282.76],
+       [281.46],
+       ...,
+       [287.36],
+       [287.96],
+       [287.16]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>pptrate</span></div><div class='xr-var-dims'>(time, hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e54d6770-1c2d-4176-b0fc-97bea1a6e724' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e54d6770-1c2d-4176-b0fc-97bea1a6e724' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4da9a585-0214-44ba-b938-85d2c16fefec' class='xr-var-data-in' type='checkbox'><label for='data-4da9a585-0214-44ba-b938-85d2c16fefec' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>kg m-2 s-1</dd><dt><span>long_name :</span></dt><dd>Precipitation rate</dd><dt><span>v_type :</span></dt><dd>scalarv</dd></dl></div><div class='xr-var-data'><pre>array([[0.],
+       [0.],
+       [0.],
+       ...,
+       [0.],
+       [0.],
+       [0.]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>spechum</span></div><div class='xr-var-dims'>(time, hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1b9ae74c-f9c8-4dc7-8004-8d95b2c20694' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1b9ae74c-f9c8-4dc7-8004-8d95b2c20694' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3234caeb-b6fd-409c-8118-804df5f268ae' class='xr-var-data-in' type='checkbox'><label for='data-3234caeb-b6fd-409c-8118-804df5f268ae' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>g g-1</dd><dt><span>long_name :</span></dt><dd>specific humidity at the measurement heigh</dd><dt><span>v_type :</span></dt><dd>scalarv</dd></dl></div><div class='xr-var-data'><pre>array([[0.005053],
+       [0.00498 ],
+       [0.004664],
+       ...,
+       [0.005471],
+       [0.00509 ],
+       [0.004873]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>windspd</span></div><div class='xr-var-dims'>(time, hru)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4c15ce5e-87e2-410b-a2de-0c0676713423' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4c15ce5e-87e2-410b-a2de-0c0676713423' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8fd9a728-074e-4bce-8c8a-ba758c44c266' class='xr-var-data-in' type='checkbox'><label for='data-8fd9a728-074e-4bce-8c8a-ba758c44c266' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m s-1</dd><dt><span>long_name :</span></dt><dd>wind speed at the measurement height</dd><dt><span>v_type :</span></dt><dd>scalarv</dd></dl></div><div class='xr-var-data'><pre>array([[2.3],
+       [2.5],
+       [2.4],
+       ...,
+       [4.4],
+       [2.3],
+       [2.5]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-638d172a-7bb3-4e6c-9a77-7c28dadb2af9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-638d172a-7bb3-4e6c-9a77-7c28dadb2af9' class='xr-section-summary' >Attributes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>dataset_orig_path :</span></dt><dd>/d2/anewman/summa/summaTestCases/testCases_data/inputData/fieldData/reynolds</dd><dt><span>history :</span></dt><dd>Tue Sep 27 21:53:08 2016: ncrename -d nHRU,hru ./inputData/fieldData/reynolds/forcing_above_aspen.nc</dd><dt><span>NCO :</span></dt><dd>&quot;4.6.0&quot;</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timeseries plot with air pressure variable and hru 1</span>
+<span class="n">P</span><span class="o">.</span><span class="n">ts_plot</span><span class="p">(</span><span class="s1">&#39;airpres&#39;</span><span class="p">,</span> <span class="n">hru_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/C. Explore forcing data of SUMMA 3.0.0_29_0.png" src="_images/C. Explore forcing data of SUMMA 3.0.0_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timeseries plot with air temperature variable and hru 1</span>
+<span class="n">P</span><span class="o">.</span><span class="n">ts_plot</span><span class="p">(</span><span class="s1">&#39;airtemp&#39;</span><span class="p">,</span> <span class="n">hru_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/C. Explore forcing data of SUMMA 3.0.0_30_0.png" src="_images/C. Explore forcing data of SUMMA 3.0.0_30_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timeseries plot with precipitaiton variable and hru 1</span>
+<span class="n">P</span><span class="o">.</span><span class="n">ts_plot</span><span class="p">(</span><span class="s1">&#39;pptrate&#39;</span><span class="p">,</span> <span class="n">hru_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/C. Explore forcing data of SUMMA 3.0.0_31_0.png" src="_images/C. Explore forcing data of SUMMA 3.0.0_31_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timeseries plot with Specific humidity variable and hru 1</span>
+<span class="n">P</span><span class="o">.</span><span class="n">ts_plot</span><span class="p">(</span><span class="s1">&#39;spechum&#39;</span><span class="p">,</span> <span class="n">hru_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/C. Explore forcing data of SUMMA 3.0.0_32_0.png" src="_images/C. Explore forcing data of SUMMA 3.0.0_32_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timeseries plot with wind speed variable and hru 1</span>
+<span class="n">P</span><span class="o">.</span><span class="n">ts_plot</span><span class="p">(</span><span class="s1">&#39;windspd&#39;</span><span class="p">,</span> <span class="n">hru_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/C. Explore forcing data of SUMMA 3.0.0_33_0.png" src="_images/C. Explore forcing data of SUMMA 3.0.0_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timeseries plot with Downward shortwave radiation variable and hru 1</span>
+<span class="n">P</span><span class="o">.</span><span class="n">ts_plot</span><span class="p">(</span><span class="s1">&#39;SWRadAtm&#39;</span><span class="p">,</span> <span class="n">hru_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/C. Explore forcing data of SUMMA 3.0.0_34_0.png" src="_images/C. Explore forcing data of SUMMA 3.0.0_34_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timeseries plot with Downward longwave radiation variable and hru 1</span>
+<span class="n">P</span><span class="o">.</span><span class="n">ts_plot</span><span class="p">(</span><span class="s1">&#39;LWRadAtm&#39;</span><span class="p">,</span> <span class="n">hru_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/C. Explore forcing data of SUMMA 3.0.0_35_0.png" src="_images/C. Explore forcing data of SUMMA 3.0.0_35_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "DavidChoi76/pysumma-tutorial",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pysumma"
+        },
+        kernelOptions: {
+            kernelName: "pysumma",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'pysumma'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="B.%20Explore%20decision%20file%20of%20SUMMA%203.0.0.html" title="previous page">B. Explore decision file of SUMMA 3.0.0</a>
+    <a class='right-next' id="next-link" href="D.%20Explore%20local%20attributes%2C%20local%20parameters%20%28global%20hru%29%20and%20basin%20parameters%20%28global%20gru%29%20of%20SUMMA%203.0.html" title="next page">D. Explore local attributes, local parameters (global hru) and basin parameters (global gru) of SUMMA 3.0</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By YoungDon Choi, Andrew Bennett<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
